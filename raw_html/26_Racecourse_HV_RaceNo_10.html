@@ -1,0 +1,2098 @@
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <title>賽果 - 賽事資料 - 賽馬資訊 - 香港賽馬會</title>
+        <link href="/racing/information/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="keywords" />
+        
+        
+    
+
+
+         
+            <link type="text/css" href="/racing/information/Chinese/Content/Comm.aspx" rel="stylesheet" /> 
+                <link type="text/css" href="/racing/information/Chinese/Content/Racing.aspx" rel="stylesheet" />
+
+        <script type="text/javascript" src="/racing/information/Scripts/jquery-1.10.2.js"></script>
+        
+    
+
+        
+    
+
+        <style type="text/css">
+           
+        </style>
+        <script language='javascript'>
+            var JcrwUrlPrefix = '/racing/Info';
+            var SSOCommonPath = '//common.hkjc.com/corporate/';
+
+            function OpenPopWinScroll(ps_Link, pv_Width, pv_Height, ps_Win) {
+                var pv_Left = 20;
+                var pv_Top = 20;
+                var ls_options = "status=no,toolbar=no,menubar=no,location=no,scrollbars=yes,resizable=yes,scrollbars=yes,left=" + pv_Left + ",top=" + pv_Top + ",width=" + pv_Width + ",height=" + pv_Height;
+                window.open(ps_Link, ps_Win, ls_options);
+            }
+        </script>
+    </head>
+    <body>
+        <div id="mainContainer">
+            
+
+
+
+<link type="text/css" href="/racing/common/chinese/css/global.css" rel="stylesheet" />
+<link type="text/css" href="/racing/common/chinese/css/racing.css" rel="stylesheet" />
+<script type="text/javascript" src="/racing/Info/Scripts/MicrosoftAjax.min.js"></script>
+<script type="text/javascript" src="/racing/Info/Scripts/MicrosoftMvcAjax.min.js"></script>
+<script type="text/javascript" src="/racing/Info/Scripts/ImgRollover.min.js"></script>
+<script type="text/javascript" src="//common.hkjc.com/js/specialChar.js"></script>
+<script type="text/javascript" src="//common.hkjc.com/js/b64.min.js"></script>
+<script type="text/javascript" src="//common.hkjc.com/corporate/scripts/customer_profile.min.js"></script>
+<script type="text/javascript" src="/racing/Info/Scripts/jquery-1.4.1.min.js"></script>
+<script src="//common.hkjc.com/corporate/scripts/jquery.jsonp-2.1.3.min.js" type="text/javascript"></script>
+<script src="/racing/info/GlobalMenu/Chinese/js/global.js" type="text/javascript"></script>
+<script src="//common.hkjc.com/corporate/scripts/SSOCore.js" type="text/javascript"></script>
+<script src="//common.hkjc.com/corporate/scripts/sso.min.js" type="text/javascript"></script>
+<script src="//common.hkjc.com/corporate/scripts/ssoConfig.js" type="text/javascript"></script>
+<script src="/racing/info/GlobalMenu/Chinese/js/jcrw_sso.js" type="text/javascript"></script>
+<script src="/racing/info/english/include/readyToShowLoginBar.js" type="text/javascript"></script>
+<script type="text/javascript" src="/racing/information/Scripts/jquery-1.10.2.js"></script>
+<script src="/racing/common/js/4e-rw.js" type="text/javascript"></script>
+
+<style>
+
+    /*body{ background:url(../../images/bg.gif) repeat-x; background-position:0 89px;}*/
+
+    div#header {
+        width: 964px;
+    }
+
+    #mainContainer, #seo .content, #footer {
+        margin-left: 0px;
+    }
+
+    #innerContent {
+        width: 920px;
+        padding: 0 10px;
+        min-height: inherit;
+        position: relative;
+    }
+
+        #innerContent .twoMenuSelect {
+            background: rgb(32, 74, 136);
+            border: 0px solid rgb(255, 255, 255);
+            border-image: none; /*left: 13px; top: 114px;*/
+            padding-left: 6px;
+            width: 800px;
+            height: 23px;
+            visibility: visible;
+            position: absolute;
+            z-index: 21;
+        }
+
+    #contentContainer .content .navBg {
+        width: 920px;
+        height: 23px;
+        background: #204A88;
+        margin: 0 10px;
+    }
+
+    #menu1 {
+        position: absolute;
+        left: 10px !important;
+        top: -23px !important;
+        *top: -23px !important;
+        width: auto !important;
+    }
+
+    .menuNav {
+        position: relative;
+        left: 0 !important;
+        top: 0 !important;
+        float: left;
+        width: auto !important;
+    }
+
+        .menuNav a {
+            display: block;
+            background: rgb(32, 74, 136);
+            padding: 3px;
+            line-height: 16px;
+            text-align: left;
+            color: rgb(255, 255, 255);
+            font-family: Arial, Verdana;
+            font-size: 11px;
+            font-style: normal;
+            font-weight: normal;
+            text-decoration: none;
+        }
+
+            .menuNav a:hover {
+                text-decoration: none;
+            }
+
+            .menuNav a.selected {
+                background: #000;
+                color: #99ffff;
+                cursor: pointer;
+                text-decoration: none;
+            }
+
+    .menuNav {
+        background: rgb(32, 74, 136);
+        height: 23px;
+    }
+
+    .twoMenu {
+        background: rgb(32, 74, 136);
+        border-image: none;
+        left: 0px;
+        width: 210px;
+        visibility: hidden;
+        position: absolute;
+        z-index: 19;
+    }
+
+        .twoMenu a {
+            border: 2px solid rgb(37, 86, 159);
+            padding: 4px;
+            text-decoration: none;
+        }
+
+            .twoMenu a:not(:first-child) {
+                border-top: none;
+            }
+
+            .twoMenu a:hover {
+                background: #000;
+                color: #99ffff;
+                cursor: pointer;
+            }
+
+    #mainNav .subNav .content {
+        height: auto;
+        padding: 9px 20px 9px 20px;
+        width: 900px;
+    }
+
+        #mainNav .subNav .content ul li a.active {
+            color: #c7b163;
+        }
+
+    #header_bottom_banner {
+        display: none;
+    }
+
+    #contentContainer .content {
+        width: 940px;
+        background: #FFF;
+        padding: 10px 0 2px 0;
+        float: left;
+    }
+    /*footer*/
+    #seo .content {
+        padding-left: 22px;
+    }
+
+    #footer {
+        padding-left: 22px;
+    }
+
+    #mainNav .subNav .content ul {
+        font-size: 0;
+    }
+
+        #mainNav .subNav .content ul li {
+            height: 16px;
+            vertical-align: top;
+        }
+
+        #mainNav .subNav .content ul .stroke {
+            font-size: 12px;
+        }
+    /*#mainContainer .mainNav_cn .subNav .content{ height:40px;}*/
+    .mainNav_cn .subNav .content ul li {
+        margin: 0;
+    }
+
+        .mainNav_cn .subNav .content ul li a {
+            line-height: inherit;
+        }
+    /*
+        #mainNav .subNav .content ul li{margin-left:-2.5px; margin-right:-2px;}
+        #mainNav .subNav .content ul .stroke{ margin-left:-3px; margin-right:-3px;}
+        #mainNav .subNav_cn .content ul .stroke{ margin-left:-3.4px; margin-right:-3.4px;}
+        */
+
+    .menuNav a {
+        padding: 2px 5px 3px 1px;
+        margin-top: 2px;
+    }
+
+        .menuNav a.selected_cur {
+            background: #e7e7e7;
+            color: #000080;
+        }
+
+    .menuNav .twoMenu a.selected_cur {
+        background: #000088;
+        color: #fff;
+    }
+
+    .menuNav_cn {
+        padding: 0 2px;
+    }
+
+        .menuNav_cn a {
+            font-family: 新細明體,Arial, Verdana;
+            font-size: 12px;
+            padding: 2px 3.7px 3px 4px;
+        }
+
+    #topNav {
+        margin: 25px 5px 0 0;
+    }
+
+        #topNav input[type="text"] {
+            height: 20px;
+            width: 79px;
+            line-height: inherit;
+            font-size: 11px;
+        }
+
+        #topNav #globalLoginControl {
+            margin-left: 5px;
+        }
+
+        #topNav a {
+            padding: 0;
+        }
+
+
+    .menuNav a.selected_cur {
+        background: #e7e7e7;
+        color: #000080;
+    }
+
+    .menuNav .twoMenu a.selected_cur {
+        background: #000088;
+        color: #fff;
+    }
+</style>
+
+
+
+<script>
+    $(document).ready(function () {
+        var url = "zh-hk" == "en-us" ? window.location.href.replace(/Chinese/gi, "Chinese") : window.location.href.replace(/Chinese/gi, "English");
+
+        if ('False' === 'True'){
+            url = "/racing/information/Chinese/Horse/SelectHorse.aspx";
+        }
+        else if ("localresults" == "trackworkonedayresult") {
+            url = "/racing/information/Chinese/Trackwork/TrackWorkSearch.aspx";
+        }
+
+        $("a.lang").attr("href", ("zh-hk" == "en-us" ? url.replace(/Chinese/gi, "Chinese") : url.replace(/Chinese/gi, "English")));
+    });
+
+    function ChangeLang() {
+        var url = "zh-hk" == "en-us" ? window.location.href.replace(/Chinese/gi, "Chinese") : window.location.href.replace(/Chinese/gi, "English");
+        if ('False' === 'True') {
+            url = "/racing/information/Chinese/Horse/SelectHorse.aspx";
+        }
+        else if ("localresults" == "trackworkonedayresult") {
+            url = "/racing/information/Chinese/Trackwork/TrackWorkSearch.aspx";
+        }
+
+        window.location.href = "zh-hk" == "en-us" ? url.replace(/Chinese/gi, "Chinese") : url.replace(/Chinese/gi, "English");
+    }
+
+    $(function () {
+
+        $("#mainNav .nav .content img").on("mouseover",function () {
+            var imgurl = $(this).attr("src");
+            var suffix = imgurl.substring(imgurl.lastIndexOf("."), imgurl.length);
+            var newimgurl = "";
+            if (imgurl.lastIndexOf("_over") < 0) {
+                newimgurl = imgurl.substring(0, imgurl.lastIndexOf(".")) + "_over" + suffix;
+                $(this).addClass("active");
+                $(this).attr("src", newimgurl);
+                $(this).attr("delSrc", imgurl);
+            }
+        })
+        $("#mainNav .nav .content img").on("mouseout",function () {
+            if ($(this).hasClass("active")) {
+                var imgurl = $(this).attr("delSrc");
+                $(this).attr("src", imgurl);
+            }
+        })
+
+        //$("#mainNav .subNav .content li").on("mouseover",function () {
+        //    $(this).siblings().children("a").css("color","#c7b163");
+        //    //if (!$(this).find("a").hasClass("active")) {
+        //    //    console.log(1)
+        //    //    $(this).find("a").addClass("active").parent("li").siblings("li:not(.active)").removeClass("active");
+        //    //    $(this).addClass("active");
+        //    //}
+        //})
+        //$("#mainNav .subNav .content li").mouseout(function () {
+        //    $(this).siblings().children("a").css("color", "#ae8701");
+        //    //if ($(this).hasClass("active")) {
+        //    //    $(this).removeClass("active");
+        //    //    $(this).find("a").removeClass("active");
+        //    //}
+        //})
+
+
+        $(".js_twoMenuSelect .menuNav").mouseover(function () {
+            $(this).find(".one_nav").addClass("selected");
+            $(this).find(".twoMenu").css("visibility", "visible");
+        })
+        $(".js_twoMenuSelect .menuNav").mouseout(function () {
+            $(this).find(".one_nav").removeClass("selected");
+            $(this).find(".twoMenu").css("visibility", "hidden");
+        })
+
+    })
+</script>
+
+
+<script type="text/javascript" language="javascript">
+    var isFocus = false;
+    setTimeout(showLogin, 25);
+</script>
+
+<div id="header">
+    <a id="logo" href="//www.hkjc.com/home/chinese/index.asp">
+    </a>
+    <div id="header_nav" class="nav">
+        <div id="topNav">
+            <div>
+                <input value="" name="searchkey" id="searchkey" type="hidden">
+                <a href="//www.hkjc.com/home/chinese/index.asp">首頁</a>
+                <a class="lang" href="javascript:ChangeLang()">English</a>
+                <input onblur="if(document.getElementById('searchkey').value=='') this.value='搜尋';isFocus = false;"
+                       onfocus="if(document.getElementById('searchkey').value!='搜尋' &amp;&amp; this.value=='搜尋') this.value='';isFocus = true;" onkeyup="setSearchVal()"
+                       maxlength="166" title="搜尋" value="搜尋" type="text" name="" id="searchtext">
+                <input onclick="javascript: goSearch(); return false;" class="iconToggle" type="image" name="" id="searchimg" src="/racing/info/GlobalMenu/chinese/images/icon_toggle.gif" alt="Submit search">
+
+            </div>
+            <span id="globalLoginControl">
+                <a class="login" href="javascript:redirectPage(strlogin)">登入</a>
+                /
+                <a href="javascript:redirectPage(strregister)">登記</a>
+                <a class="faq" href="javascript:redirectPage(strhelp)">常見問題</a>
+            </span>
+            <div id="ssoDiv"></div>
+        </div>
+        <div id="ewinContainer">
+            <a class="ewin" onclick="WATracker.trackClickEvent('header_ewin_home')" href="//bet.hkjc.com/ch/home" target="_blank">
+
+            </a>
+            <a onclick="WATracker.trackClickEvent('header_ewin_racing')" href="//bet.hkjc.com/ch/racing/home" target="_blank">賽馬</a>
+            <a onclick="WATracker.trackClickEvent('header_ewin_football')" href="//bet.hkjc.com/ch/football/home" target="_blank">足智彩</a>
+            <a onclick="WATracker.trackClickEvent('header_ewin_marksix')" href="//bet.hkjc.com/ch/marksix/home" target="_blank">六合彩</a>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" language="javascript">
+    var focus = "false";
+    var search_category = "racing";
+    document.getElementById("searchtext").onkeypress = function handleKeyPress(evt) {
+        var keycode = (window.event) ? event.keyCode : evt.which;
+        if (keycode == 13) {
+            if (isFocus) {
+                focus = "false";
+                goSearch();
+                focus = "true";
+
+            }
+        }
+    }
+    function setSearchVal() {
+        document.getElementById('searchkey').value = document.getElementById('searchtext').value;
+    }
+    function replaceAllChar(text, inp) {
+        while (text.indexOf(inp) >= 0)
+            text = text.replace(inp, '');
+        return text;
+    }
+    function goSearch() {
+
+        if (focus == "false") {
+
+            var keyword = document.getElementById('searchkey').value;
+            for (var i = 0; i < charArr.length; i++)
+                keyword = replaceAllChar(keyword, charArr[i]);
+            keyword = keyword.replace(/^\s+/, '').replace(/\s+$/, '');
+            if (keyword == "") {
+
+                var lang = "english";
+
+                if (lang == "english")
+                    alert("Please input a search query");
+
+                if (lang == "chinese")
+                    alert("請輸入搜尋字串");
+            }
+            else {
+                var url = "http://search.hkjc.com/search/chinese/search.aspx?k=" + Base64.encode(encodeURIComponent(keyword));
+                if (search_category == "utility") {
+                    url += "&g=faq";
+                }
+                else {
+                    url += "&g=all";
+                }
+                url += "&t=n";
+                window.location.href = url;
+            }
+        }
+        else {
+            focus = "false";
+        }
+    }
+</script>
+
+
+
+<div class="clearfix mainNav_cn" id="mainNav">
+    <div class="nav">
+        <div class="shadowL"></div>
+        <div class="content">
+                        <a href="//entertainment.hkjc.com/zh-hk/index" rel="entertainment" target="_top">
+                            <img src="/racing/info/GlobalMenu/chinese/images/navigation/entertainment-l1.gif" alt="馬場體驗">
+                        </a>
+                        <a href="//racing.hkjc.com/racing/chinese/index.aspx" rel="racing" target="">
+                            <img src="/racing/info/GlobalMenu/chinese/images/navigation/racing-l1_over.gif" alt="賽馬資訊">
+                        </a>
+                        <a href="//football.hkjc.com/football/chinese/index.aspx" rel="football" target="">
+                            <img src="/racing/info/GlobalMenu/chinese/images/navigation/football-l1.gif" alt="足球資訊">
+                        </a>
+                        <a href="//member.hkjc.com/member/chinese/index.aspx" rel="member" target="">
+                            <img src="/racing/info/GlobalMenu/chinese/images/navigation/member-l1.gif" alt="馬會會員">
+                        </a>
+                        <a href="//charities.hkjc.com/charities/chinese/index.aspx" rel="charities" target="">
+                            <img src="/racing/info/GlobalMenu/chinese/images/navigation/charities-l1.gif" alt="慈善及社區貢獻">
+                        </a>
+                        <a href="//corporate.hkjc.com/corporate/chinese/index.aspx" rel="corporate" target="">
+                            <img src="/racing/info/GlobalMenu/chinese/images/navigation/corporate-l1.gif" alt="馬會知多少">
+                        </a>
+        </div>
+        <div class="shadowR"></div>
+    </div>
+    <div class="subNav">
+        <div class="shadowL"></div>
+        <div class="content">
+            <ul>
+                                    <li >
+                                        <a href="javascript:;" rel="racing info" target="">賽事資料(本地)</a>
+                                            <span class="stroke">|</span>
+                                                                                    <div class="pullmenu clearfix">
+                                                <div class="shadowL"></div>
+                                                <div class="content">
+                                                    <dl>
+                                                            <dt>
+                                                                <a href="/racing/information/Chinese/racing/Entries.aspx" rel="entries" target="">報名表</a>
+                                                            </dt>
+                                                            <dd></dd>
+                                                            <dt>
+                                                                    <div class=" pullmenu clearfix">
+                                                                        <div class="shadowL"></div>
+                                                                        <div class="content">
+                                                                            <dl>
+                                                                                    <dt>
+                                                                                        <a href="/racing/information/Chinese/racing/RaceCard.aspx" rel="race-card" target="">排位表</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                                    <dt>
+                                                                                        <a href="/racing/information/Chinese/Racing/Localtrackwork.aspx" rel="race-card" target="">晨操資料</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                                    <dt>
+                                                                                        <a href="/racing/information/Chinese/Racing/RaceReportExt.aspx" rel="race-card" target="">各駒上次競賽事件摘要</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                                    <dt>
+                                                                                        <a href="/racing/information/Chinese/Racing/FormLine.aspx" rel="race-card" target="">同場賽駒上次對壘賽績比較</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                                    <dt>
+                                                                                        <a href="/racing/information/Chinese/Racing/ExceptionalFactors.aspx" rel="race-card" target="">特別因素</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                                    <dt>
+                                                                                        <a href="/racing/information/Chinese/Racing/VeterinaryRecord.aspx" rel="race-card" target="">傷患紀錄</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                            </dl>
+                                                                        </div>
+                                                                        <div class="shadowR"></div>
+                                                                        <div class="shadowB"></div>
+                                                                    </div>
+                                                                <a href="/racing/information/Chinese/racing/RaceCard.aspx" rel="race card" target="">排位表</a>
+                                                            </dt>
+                                                            <dd></dd>
+                                                            <dt>
+                                                                <a href="//bet.hkjc.com/ch/racing/wp/" rel="current odds" target="_blank">即時賠率</a>
+                                                            </dt>
+                                                            <dd></dd>
+                                                            <dt>
+                                                                    <div class=" pullmenu clearfix">
+                                                                        <div class="shadowL"></div>
+                                                                        <div class="content">
+                                                                            <dl>
+                                                                                    <dt>
+                                                                                        <a href="/racing/information/Chinese/Racing/TrainersEntries.aspx" rel="race-card" target="">全日練馬師分場表</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                                    <dt>
+                                                                                        <a href="/racing/information/Chinese/Racing/TNCEntries.aspx" rel="race-card" target="">練馬師王出馬表</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                            </dl>
+                                                                        </div>
+                                                                        <div class="shadowR"></div>
+                                                                        <div class="shadowB"></div>
+                                                                    </div>
+                                                                <a href="/racing/information/Chinese/racing/TrainersEntries.aspx" rel="trainers entries" target="">練馬師分場表</a>
+                                                            </dt>
+                                                            <dd></dd>
+                                                            <dt>
+                                                                    <div class=" pullmenu clearfix">
+                                                                        <div class="shadowL"></div>
+                                                                        <div class="content">
+                                                                            <dl>
+                                                                                    <dt>
+                                                                                        <a href="/racing/information/Chinese/Racing/JockeysRides.aspx" rel="race-card" target="">全日騎師分場表</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                                    <dt>
+                                                                                        <a href="/racing/information/chinese/Racing/JKCScheduledRides.aspx" rel="race-card" target="">騎師王坐騎表</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                            </dl>
+                                                                        </div>
+                                                                        <div class="shadowR"></div>
+                                                                        <div class="shadowB"></div>
+                                                                    </div>
+                                                                <a href="/racing/information/chinese/Racing/JockeysRides.aspx" rel="jockeys rides" target="">騎師分場表</a>
+                                                            </dt>
+                                                            <dd></dd>
+                                                            <dt>
+                                                                    <div class=" pullmenu clearfix">
+                                                                        <div class="shadowL"></div>
+                                                                        <div class="content">
+                                                                            <dl>
+                                                                                    <dt>
+                                                                                        <a href="/racing/information/Chinese/racing/Changes.aspx" rel="race-card" target="">更易事項</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                                    <dt>
+                                                                                        <a href="/racing/information/chinese/Racing/summary.aspx" rel="race-card" target="">賽馬日一般資訊</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                                    <dt>
+                                                                                        <a href="/racing/chinese/racing-info/rdf/raceday_focus_1.asp" rel="race-card" target="">賽日頭條</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                                    <dt>
+                                                                                        <a href="/racing/speedpro/chinese/formguide/formguide.html" rel="race-card" target="_blank">速勢能量</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                                    <dt>
+                                                                                        <a href="javascript:NewWindow(&#39;/racing/chinese/stats-centre/index.aspx&#39;,&#39;statscentre&#39;,640,600,0,0);" rel="race-card" target="">賽日數據</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                                    <dt>
+                                                                                        <a href="/racing/chinese/racing-info/last-run-reminder.aspx" rel="race-card" target="">上仗備忘</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                                    <dt>
+                                                                                        <a href="/racing/chinese/racing-info/newhorse.asp" rel="race-card" target="">初出馬介紹</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                                    <dt>
+                                                                                        <a href="//campaign.hkjc.com/ch/racing/conghua-movement-records.aspx" rel="race-card" target="_blank">馬匹搬遷紀錄</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                                    <dt>
+                                                                                        <a href="//campaign.hkjc.com/ch/racing/jtcombo_debutants_statistics.aspx" rel="race-card" target="_blank">騎練配對及初岀馬成績</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                                    <dt>
+                                                                                        <a href="/racing/Chinese/tipsindex/tips_index.asp" rel="race-card" target="_blank">貼士指數</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                                    <dt>
+                                                                                        <a href="/racing/chinese/racing-info/racing_course_select.aspx" rel="race-card" target="_top">賽道選用</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                                    <dt>
+                                                                                        <a href="/racing/chinese/racing-info/racing_course.aspx" rel="race-card" target="">跑道資料</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                                    <dt>
+                                                                                        <a href="/racing/chinese/racing-info/racing_course_time.aspx" rel="race-card" target="">跑道標準及紀錄時間 </a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                                    <dt>
+                                                                                        <a href="/racing/chinese/racing-info/racing_rules_instr.aspx" rel="race-card" target="">賽事規例及指示</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                                    <dt>
+                                                                                        <a href="/racing/chinese/learn-racing/learn-procedures.aspx" rel="race-card" target="">馬匹報名及排位程序</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                                    <dt>
+                                                                                        <a href="/racing/chinese/racing-info/reg_approved_gear.aspx" rel="race-card" target="">香港賽馬會裝備登記冊(馬匹和人)</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                                    <dt>
+                                                                                        <a href="//member.hkjc.com/member/chinese/horse-owner/list-of-bloodstock-agents.aspx" rel="race-card" target="">販馬代理</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                                    <dt>
+                                                                                        <a href="/racing/chinese/racing-info/handicap_policy.asp" rel="race-card" target="">評磅及評分政策</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                                    <dt>
+                                                                                        <a href="javascript:jcew_allupcalculator(&#39;/racing/information/Chinese/racing/AllUpCalculator.aspx&#39;)" rel="race-card" target="">過關計算機</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                                    <dt>
+                                                                                        <a href="/racing/information/Chinese/racing/TTAutoPick.aspx" rel="race-card" target="">三T神算機</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                                    <dt>
+                                                                                        <a href="/racing/chinese/racing-info/racing_weather.asp" rel="race-card" target="">天氣預測</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                            </dl>
+                                                                        </div>
+                                                                        <div class="shadowR"></div>
+                                                                        <div class="shadowB"></div>
+                                                                    </div>
+                                                                <a href="/racing/information/Chinese/racing/Changes.aspx" rel="ref info" target="">參考資料</a>
+                                                            </dt>
+                                                            <dd></dd>
+                                                            <dt>
+                                                                    <div class=" pullmenu clearfix">
+                                                                        <div class="shadowL"></div>
+                                                                        <div class="content">
+                                                                            <dl>
+                                                                                    <dt>
+                                                                                        <a href="/racing/information/Chinese/racing/Draw.aspx" rel="race-card" target="">檔位統計</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                                    <dt>
+                                                                                        <a href="/racing/chinese/racing-info/tnc-odds-chart.aspx" rel="race-card" target="">練馬師王賠率走勢圖</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                                    <dt>
+                                                                                        <a href="/racing/information/Chinese/tnc/tncStat.aspx" rel="race-card" target="">練馬師王統計</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                                    <dt>
+                                                                                        <a href="/racing/chinese/racing-info/jkc-odds-chart.aspx" rel="race-card" target="">騎師王賠率走勢圖</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                                    <dt>
+                                                                                        <a href="/racing/information/chinese/Jkc/JkcStat.aspx" rel="race-card" target="">騎師王統計</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                                    <dt>
+                                                                                        <a href="/racing/information/chinese/Jockey/JockeyFavourite.aspx" rel="race-card" target="">騎師大熱勝出及入位統計</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                                    <dt>
+                                                                                        <a href="/racing/information/chinese/Trainers/TrainerFavourite.aspx" rel="race-card" target="">練馬師大熱勝出及入位統計</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                            </dl>
+                                                                        </div>
+                                                                        <div class="shadowR"></div>
+                                                                        <div class="shadowB"></div>
+                                                                    </div>
+                                                                <a href="/racing/information/Chinese/racing/Draw.aspx" rel="statistics" target="">統計資料</a>
+                                                            </dt>
+                                                            <dd></dd>
+                                                            <dt>
+                                                                <a href="/racing/information/Chinese/racing/LocalResults.aspx" rel="results" target="">賽果</a>
+                                                            </dt>
+                                                            <dd></dd>
+                                                            <dt>
+                                                                    <div class=" pullmenu clearfix">
+                                                                        <div class="shadowL"></div>
+                                                                        <div class="content">
+                                                                            <dl>
+                                                                                    <dt>
+                                                                                        <a href="/racing/information/Chinese/Reports/RaceReportFull.aspx" rel="race-card" target="">競賽事件報告</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                                    <dt>
+                                                                                        <a href="/racing/information/Chinese/Reports/CORunning.aspx" rel="race-card" target="">沿途走勢評述</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                            </dl>
+                                                                        </div>
+                                                                        <div class="shadowR"></div>
+                                                                        <div class="shadowB"></div>
+                                                                    </div>
+                                                                <a href="/racing/information/Chinese/Reports/RaceReportFull.aspx" rel="race report" target=""> 賽事報告</a>
+                                                            </dt>
+                                                            <dd></dd>
+                                                            <dt>
+                                                                    <div class=" pullmenu clearfix">
+                                                                        <div class="shadowL"></div>
+                                                                        <div class="content">
+                                                                            <dl>
+                                                                                    <dt>
+                                                                                        <a href="/racing/information/Chinese/Jockey/JockeyRanking.aspx" rel="race-card" target="">騎師資料</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                                    <dt>
+                                                                                        <a href="/racing/information/Chinese/Trainers/TrainerRanking.aspx" rel="race-card" target="">練馬師資料</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                            </dl>
+                                                                        </div>
+                                                                        <div class="shadowR"></div>
+                                                                        <div class="shadowB"></div>
+                                                                    </div>
+                                                                <a href="/racing/information/Chinese/Jockey/JockeyRanking.aspx" rel="jockeys trainers" target="">騎練資料</a>
+                                                            </dt>
+                                                            <dd></dd>
+                                                            <dt>
+                                                                    <div class=" pullmenu clearfix">
+                                                                        <div class="shadowL"></div>
+                                                                        <div class="content">
+                                                                            <dl>
+                                                                                    <dt>
+                                                                                        <a href="/racing/information/chinese/Horse/SelectHorse.aspx" rel="race-card" target="">馬匹資料</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                                    <dt>
+                                                                                        <a href="/racing/information/Chinese/Horse/LatestOnHorse.aspx?View=Horses/clas/" rel="race-card" target="">馬匹評分</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                                    <dt>
+                                                                                        <a href="/racing/chinese/racing-info/fwb_declared_starters.asp" rel="race-card" target="">「自購曾出賽馬匹及新馬特別獎金計劃」及「香港國際馬匹拍賣會新馬獎金」資料</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                                    <dt>
+                                                                                        <a href="/racing/information/chinese/Trackwork/TrackworkSearch.aspx" rel="race-card" target="">晨操資料</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                                    <dt>
+                                                                                        <a href="/racing/information/chinese/Horse/Btresult.aspx" rel="race-card" target="">試閘結果</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                                    <dt>
+                                                                                        <a href="/racing/information/Chinese/VeterinaryRecords/OveRecord.aspx" rel="race-card" target="">傷患紀錄</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                                    <dt>
+                                                                                        <a href="/racing/information/Chinese/Horse/LatestOnHorse.aspx" rel="race-card" target="">馬匹消息</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                                    <dt>
+                                                                                        <a href="/racing/information/Chinese/Racing/VeterinaryRecord.aspx" rel="race-card" target="">馬匹健康狀況</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                                    <dt>
+                                                                                        <a href="/racing/information/chinese/Horse/HorseFormerName.aspx" rel="race-card" target="">馬匹來港前名稱</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                                    <dt>
+                                                                                        <a href="/racing/chinese/racing-info/pps_import_critieria.asp" rel="race-card" target="">馬匹進口資格</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                                    <dt>
+                                                                                        <a href="//www.hkjc.com/chinese/pp_formsheet/Veterinary_Pre-Import_Exam_Protocol_Version_Chi.pdf" rel="race-card" target="_blank">馬匹進口前體格檢驗規定</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                                    <dt>
+                                                                                        <a href="/racing/chinese/racing-info/ppo_performance_current.asp" rel="race-card" target="">自購馬來港前賽績</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                            </dl>
+                                                                        </div>
+                                                                        <div class="shadowR"></div>
+                                                                        <div class="shadowB"></div>
+                                                                    </div>
+                                                                <a href="/racing/information/chinese/Horse/SelectHorse.aspx" rel="horses" target="">馬匹資料</a>
+                                                            </dt>
+                                                            <dd></dd>
+                                                            <dt>
+                                                                <a href="/racing/information/chinese/Horse/Btresult.aspx" rel="btresult" target="">試閘結果</a>
+                                                            </dt>
+                                                            <dd></dd>
+                                                            <dt>
+                                                                <a href="/racing/information/Chinese/Racing/Fixture.aspx" rel="fixtures" target="">賽期表</a>
+                                                            </dt>
+                                                            <dd></dd>
+                                                    </dl>
+                                                </div>
+                                                <div class="shadowR"></div>
+                                                <div class="shadowB"></div>
+                                            </div>
+                                    </li>
+                                    <li >
+                                        <a href="javascript:;" rel="racing info simulcast" target="">賽事資料(越洋轉播)</a>
+                                            <span class="stroke">|</span>
+                                                                                    <div class="pullmenu clearfix">
+                                                <div class="shadowL"></div>
+                                                <div class="content">
+                                                    <dl>
+                                                            <dt>
+                                                                <a href="//racing.hkjc.com/zh-hk/overseas/" rel="racing-info-simulcast" target="">賽事資料 </a>
+                                                            </dt>
+                                                            <dd></dd>
+                                                            <dt>
+                                                                <a href="//racing.hkjc.com/zh-hk/overseas/simulcast_fixture" rel="simulcast-fixture" target="">賽期表 </a>
+                                                            </dt>
+                                                            <dd></dd>
+                                                            <dt>
+                                                                <a href="/racing/chinese/racing-info/world-pool/worldpool.aspx" rel="racing-info-worldpool" target="">全球匯合彩池</a>
+                                                            </dt>
+                                                            <dd></dd>
+                                                    </dl>
+                                                </div>
+                                                <div class="shadowR"></div>
+                                                <div class="shadowB"></div>
+                                            </div>
+                                    </li>
+                                    <li >
+                                        <a href="javascript:;" rel="racing news" target="">賽馬新聞</a>
+                                            <span class="stroke">|</span>
+                                                                                    <div class="pullmenu clearfix">
+                                                <div class="shadowL"></div>
+                                                <div class="content">
+                                                    <dl>
+                                                            <dt>
+                                                                <a href="//corporate.hkjc.com/corporate/chinese/corporate-news/index.aspx" rel="corporate news" target="">馬會新聞</a>
+                                                            </dt>
+                                                            <dd></dd>
+                                                            <dt>
+                                                                <a href="//racingnews.hkjc.com/chinese/" rel="racing news" target="">賽馬新聞</a>
+                                                            </dt>
+                                                            <dd></dd>
+                                                            <dt>
+                                                                <a href="//racingnews.hkjc.com/chinese/archive/" rel="racing news archive" target="">新聞資料庫</a>
+                                                            </dt>
+                                                            <dd></dd>
+                                                            <dt>
+                                                                <a href="//racingnews.hkjc.com/chinese/media-guide/" rel="media-guide" target="">賽事概覽</a>
+                                                            </dt>
+                                                            <dd></dd>
+                                                            <dt>
+                                                                <a href="//www.hkjc.com/chinese/pressrelease/index.asp" rel="media box" target="">傳媒區</a>
+                                                            </dt>
+                                                            <dd></dd>
+                                                    </dl>
+                                                </div>
+                                                <div class="shadowR"></div>
+                                                <div class="shadowB"></div>
+                                            </div>
+                                    </li>
+                                    <li >
+                                        <a href="javascript:;" rel="key races" target="">主要賽事</a>
+                                            <span class="stroke">|</span>
+                                                                                    <div class="pullmenu clearfix">
+                                                <div class="shadowL"></div>
+                                                <div class="content">
+                                                    <dl>
+                                                            <dt>
+                                                                <a href="/racing/chinese/racing-info/pattern_races.aspx" rel="pattern_races" target="">香港分級賽
+</a>
+                                                            </dt>
+                                                            <dd></dd>
+                                                            <dt>
+                                                                <a href="/racing/information/Chinese/Racing/Fixture.aspx" rel="monthly-race-programme" target="">今季賽期表</a>
+                                                            </dt>
+                                                            <dd></dd>
+                                                            <dt>
+                                                                <a href="/racing/chinese/racing-info/racing-calendar.asp" rel="download-racing-calendar" target="">下載互動賽期表</a>
+                                                            </dt>
+                                                            <dd></dd>
+                                                            <dt>
+                                                                <a href="//racing.hkjc.com/zh-hk/overseas/simulcast_fixture" rel="simulcast-fixtures" target="">越洋轉播賽期表</a>
+                                                            </dt>
+                                                            <dd></dd>
+                                                    </dl>
+                                                </div>
+                                                <div class="shadowR"></div>
+                                                <div class="shadowB"></div>
+                                            </div>
+                                    </li>
+                                    <li >
+                                        <a href="javascript:;" rel="multimedia showcase" target="">視聽播放區</a>
+                                            <span class="stroke">|</span>
+                                                                                    <div class="pullmenu clearfix">
+                                                <div class="shadowL"></div>
+                                                <div class="content">
+                                                    <dl>
+                                                            <dt>
+                                                                <a href="/racing/chinese/showcase/showcase.asp" rel="tv programme replay" target="">賽馬節目</a>
+                                                            </dt>
+                                                            <dd></dd>
+                                                            <dt>
+                                                                <a href="/racing/chinese/showcase/live.asp" rel="live broadcast" target="">賽日收音機</a>
+                                                            </dt>
+                                                            <dd></dd>
+                                                            <dt>
+                                                                <a href="/racing/chinese/showcase/trackwork.asp" rel="daily-trackwork" target="">每日晨操片段</a>
+                                                            </dt>
+                                                            <dd></dd>
+                                                            <dt>
+                                                                <a href="/racing/chinese/showcase/btrs.asp" rel="barrier trials" target="">試閘片段</a>
+                                                            </dt>
+                                                            <dd></dd>
+                                                            <dt>
+                                                                    <div class=" pullmenu clearfix">
+                                                                        <div class="shadowL"></div>
+                                                                        <div class="content">
+                                                                            <dl>
+                                                                                    <dt>
+                                                                                        <a href="/racing/chinese/showcase/tvprogramme_program.asp" rel="race-card" target="">電視節目簡介</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                                    <dt>
+                                                                                        <a href="/racing/chinese/showcase/tvprogramme_presenter_1.asp" rel="race-card" target="">賽馬節目主持人</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                            </dl>
+                                                                        </div>
+                                                                        <div class="shadowR"></div>
+                                                                        <div class="shadowB"></div>
+                                                                    </div>
+                                                                <a href="/racing/chinese/showcase/tvprogramme_program.asp" rel="tv programme details" target="">節目 / 主持介紹</a>
+                                                            </dt>
+                                                            <dd></dd>
+                                                            <dt>
+                                                                <a href="/racing/chinese/racing-info/ppo_performance_current.asp" rel="pp pre-import races footage" target="">自購馬來港前賽事片段</a>
+                                                            </dt>
+                                                            <dd></dd>
+                                                            <dt>
+                                                                <a href="/racing/chinese/showcase/racingenew.asp" rel="racing wiki" target="">賽馬娛樂新聞</a>
+                                                            </dt>
+                                                            <dd></dd>
+                                                            <dt>
+                                                                <a href="/racing/chinese/racing-info/racing-control-video.aspx" rel="racing-control-video" target="">賽事規管知多些</a>
+                                                            </dt>
+                                                            <dd></dd>
+                                                    </dl>
+                                                </div>
+                                                <div class="shadowR"></div>
+                                                <div class="shadowB"></div>
+                                            </div>
+                                    </li>
+                                    <li >
+                                        <a href="javascript:;" rel="international-racing" target="">國際賽馬</a>
+                                            <span class="stroke">|</span>
+                                                                                    <div class="pullmenu clearfix">
+                                                <div class="shadowL"></div>
+                                                <div class="content">
+                                                    <dl>
+                                                            <dt>
+                                                                <a href="/racing/chinese/international-racing/index.aspx" rel="intro" target="">國際賽事總覽及報名</a>
+                                                            </dt>
+                                                            <dd></dd>
+                                                            <dt>
+                                                                <a href="https://hkjc.com/r/HKIR-ch" rel="hkir" target="_blank">浪琴香港國際賽事</a>
+                                                            </dt>
+                                                            <dd></dd>
+                                                            <dt>
+                                                                <a href="https://hkjc.com/r/champions-day-ch" rel="apqeii-cup" target="_blank">富衛保險冠軍賽馬日</a>
+                                                            </dt>
+                                                            <dd></dd>
+                                                            <dt>
+                                                                <a href="https://hkjc.com/r/stewards-cup-ch" rel="stewards-cup" target="_blank">董事盃</a>
+                                                            </dt>
+                                                            <dd></dd>
+                                                            <dt>
+                                                                <a href="https://hkjc.com/r/centenary-sprint-ch" rel="centenary-race" target="_blank">百週年紀念短途盃</a>
+                                                            </dt>
+                                                            <dd></dd>
+                                                            <dt>
+                                                                <a href="https://hkjc.com/r/hk-goldcup-ch" rel="hkgoldcup" target="_blank">花旗銀行香港金盃</a>
+                                                            </dt>
+                                                            <dd></dd>
+                                                            <dt>
+                                                                <a href="https://hkjc.com/r/jubliee-cup-ch" rel="queenssilverjubileecup" target="_blank">女皇銀禧紀念盃</a>
+                                                            </dt>
+                                                            <dd></dd>
+                                                            <dt>
+                                                                <a href="https://hkjc.com/r/champions-charter-cup-ch" rel="championsnchatercup" target="_blank">渣打冠軍暨遮打盃</a>
+                                                            </dt>
+                                                            <dd></dd>
+                                                            <dt>
+                                                                <a href="/racing/chinese/international-racing/g2-g3-races/index.aspx" rel="g2-g3-races" target="">二級賽及三級賽</a>
+                                                            </dt>
+                                                            <dd></dd>
+                                                            <dt>
+                                                                    <div class=" pullmenu clearfix">
+                                                                        <div class="shadowL"></div>
+                                                                        <div class="content">
+                                                                            <dl>
+                                                                                    <dt>
+                                                                                        <a href="/racing/chinese/international-racing/world-rankings/world-jockeys.aspx" rel="race-card" target="">全球最佳騎師排行榜</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                                    <dt>
+                                                                                        <a href="/racing/chinese/international-racing/world-rankings/world50-ranking.aspx" rel="race-card" target="">全球最佳賽駒排行榜</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                                    <dt>
+                                                                                        <a href="/racing/chinese/international-racing/world-rankings/world-ranking.aspx" rel="race-card" target="">2024世界馬匹年終排名</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                                    <dt>
+                                                                                        <a href="/racing/chinese/international-racing/world-rankings/world100-g1-ranking.aspx" rel="race-card" target="">全球一級賽排名榜</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                            </dl>
+                                                                        </div>
+                                                                        <div class="shadowR"></div>
+                                                                        <div class="shadowB"></div>
+                                                                    </div>
+                                                                <a href="/racing/chinese/international-racing/world-rankings/world50-ranking.aspx" rel="world-rankings" target="_top">世界排名</a>
+                                                            </dt>
+                                                            <dd></dd>
+                                                            <dt>
+                                                                    <div class=" pullmenu clearfix">
+                                                                        <div class="shadowL"></div>
+                                                                        <div class="content">
+                                                                            <dl>
+                                                                                    <dt>
+                                                                                        <a href="/racing/chinese/international-racing/hk-int-rating/hk-int-rating.aspx" rel="race-card" target="">最新香港馬匹國際評分</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                                    <dt>
+                                                                                        <a href="/racing/chinese/international-racing/hk-int-rating/hk-int-rating-115.aspx" rel="race-card" target="">香港馬匹季終排名</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                            </dl>
+                                                                        </div>
+                                                                        <div class="shadowR"></div>
+                                                                        <div class="shadowB"></div>
+                                                                    </div>
+                                                                <a href="/racing/chinese/international-racing/hk-int-rating/hk-int-rating.aspx" rel="hong-kong-international-rankings" target="">香港馬匹國際評分</a>
+                                                            </dt>
+                                                            <dd></dd>
+                                                    </dl>
+                                                </div>
+                                                <div class="shadowR"></div>
+                                                <div class="shadowB"></div>
+                                            </div>
+                                    </li>
+                                    <li >
+                                        <a href="//racing.hkjc.com/racing/chinese/international-sale/index.aspx" rel="hkis" target="">香港國際馬匹拍賣會</a>
+                                            <span class="stroke">|</span>
+                                                                            </li>
+                                    <li >
+                                        <a href="//crc.hkjc.com/ch/index.aspx" rel="ctc" target="_blank">從化馬場</a>
+                                            <span class="stroke">|</span>
+                                                                            </li>
+                                    <li >
+                                        <a href="//special.hkjc.com/e-win/zh-HK/betting-info/racing/beginners-guide/guide/" rel="betting guide" target="_blank">投注指南</a>
+                                            <span class="stroke">|</span>
+                                                                            </li>
+                                    <li >
+                                        <a href="javascript:;" rel="ra-learn-racing" target="">賽馬知多些</a>
+                                            <span class="stroke">|</span>
+                                                                                    <div class="pullmenu clearfix">
+                                                <div class="shadowL"></div>
+                                                <div class="content">
+                                                    <dl>
+                                                            <dt>
+                                                                <a href="https://campaigns.hkjc.com/goracing/ch/" rel="ra-racing-academy" target="_blank">Go Racing</a>
+                                                            </dt>
+                                                            <dd></dd>
+                                                            <dt>
+                                                                <a href="/racing/chinese/learn-racing/photo-finish.aspx" rel="ra-photo-finish" target="">終點攝影</a>
+                                                            </dt>
+                                                            <dd></dd>
+                                                            <dt>
+                                                                    <div class=" pullmenu clearfix">
+                                                                        <div class="shadowL"></div>
+                                                                        <div class="content">
+                                                                            <dl>
+                                                                                    <dt>
+                                                                                        <a href="/racing/chinese/learn-racing/racing-legacy-and-encyclopedia/racing-legacy.aspx" rel="race-card" target="">賽馬傳奇</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                                    <dt>
+                                                                                        <a href="//corporate.hkjc.com/corporate/chinese/history-and-reports/the-hong-kong-racing-museum.aspx" rel="race-card" target="">香港賽馬博物館</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                                    <dt>
+                                                                                        <a href="/racing/chinese/learn-racing/racing-legacy-and-encyclopedia/know-about-horses.aspx" rel="race-card" target="">馬匹小百科</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                            </dl>
+                                                                        </div>
+                                                                        <div class="shadowR"></div>
+                                                                        <div class="shadowB"></div>
+                                                                    </div>
+                                                                <a href="/racing/chinese/learn-racing/racing-legacy-and-encyclopedia/racing-legacy.aspx" rel="legacy-encyclopedia" target="">賽馬歷史及百科 </a>
+                                                            </dt>
+                                                            <dd></dd>
+                                                            <dt>
+                                                                    <div class=" pullmenu clearfix">
+                                                                        <div class="shadowL"></div>
+                                                                        <div class="content">
+                                                                            <dl>
+                                                                                    <dt>
+                                                                                        <a href="/racing/chinese/learn-racing/learn-school.aspx" rel="race-card" target="">騎術學校</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                                    <dt>
+                                                                                        <a href="//corporate.hkjc.com/corporate/chinese/jc-news-and-activities/jc-equestrian-development/beas-river-equestrian/bre-index.aspx" rel="race-card" target="">雙魚河馬術中心</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                                    <dt>
+                                                                                        <a href="//campaign.hkjc.com/ch/racing-trainee-recruitment/trainee-index.aspx" rel="race-card" target="popup">賽馬培訓發展委員會</a>
+                                                                                    </dt>
+                                                                                    <dd></dd>
+                                                                            </dl>
+                                                                        </div>
+                                                                        <div class="shadowR"></div>
+                                                                        <div class="shadowB"></div>
+                                                                    </div>
+                                                                <a href="/racing/chinese/learn-racing/learn-school.aspx" rel="training-development" target="">騎術培訓</a>
+                                                            </dt>
+                                                            <dd></dd>
+                                                    </dl>
+                                                </div>
+                                                <div class="shadowR"></div>
+                                                <div class="shadowB"></div>
+                                            </div>
+                                    </li>
+                                    <li class="last pullmenuLeft">
+                                        <a href="javascript:;" rel="ra-restart" target="">RESTART</a>
+                                                                                    <div class="pullmenu clearfix">
+                                                <div class="shadowL"></div>
+                                                <div class="content">
+                                                    <dl>
+                                                            <dt>
+                                                                <a href="/racing/chinese/restart/index.aspx" rel="restart-overview" target="">概覽</a>
+                                                            </dt>
+                                                            <dd></dd>
+                                                            <dt>
+                                                                <a href="/racing/chinese/restart/former-horse.aspx" rel="former-horse" target="">如何辨別香港退役賽駒</a>
+                                                            </dt>
+                                                            <dd></dd>
+                                                            <dt>
+                                                                <a href="/racing/chinese/restart/retraining.aspx" rel="retraining" target="">退役賽駒再培訓計劃</a>
+                                                            </dt>
+                                                            <dd></dd>
+                                                            <dt>
+                                                                <a href="/racing/chinese/restart/around-globe.aspx" rel="around-globe" target="">全球各地的香港馬匹</a>
+                                                            </dt>
+                                                            <dd></dd>
+                                                            <dt>
+                                                                <a href="/racing/chinese/restart/contact-us.aspx" rel="restart-contact-us" target="">聯絡我們</a>
+                                                            </dt>
+                                                            <dd></dd>
+                                                    </dl>
+                                                </div>
+                                                <div class="shadowR"></div>
+                                                <div class="shadowB"></div>
+                                            </div>
+                                    </li>
+            </ul>
+        </div>
+        <div class="shadowR"></div>
+    </div>
+    <div class="shadowB"></div>
+</div>
+
+<div id="contentContainer">
+    <div class="shadowL"></div>
+    <div class="content">
+        <div class="navBg"></div>
+        <div id="innerContent" style="display: block;">
+
+            <div id="menu1" class="js_twoMenuSelect twoMenuSelect" style="">
+                                            <div class="menuNav menuNav_cn" id="hel1">
+                                                <a id="lnk1" class="one_nav " href="/racing/information/Chinese/racing/Entries.aspx" target="">&nbsp;報名表</a>
+                                            </div>
+                                            <div class="menuNav menuNav_cn" id="hel2">
+                                                <a id="lnk2" class="one_nav " href="/racing/information/Chinese/racing/RaceCard.aspx" target="">&nbsp;排位表</a>
+                                                    <div class="twoMenu" style="">
+                                                            <a id="lnk21" class="" href="/racing/information/Chinese/racing/RaceCard.aspx" target="">&nbsp;排位表</a>
+                                                            <a id="lnk22" class="" href="/racing/information/Chinese/Racing/Localtrackwork.aspx" target="">&nbsp;晨操資料</a>
+                                                            <a id="lnk23" class="" href="/racing/information/Chinese/Racing/RaceReportExt.aspx" target="">&nbsp;各駒上次競賽事件摘要</a>
+                                                            <a id="lnk24" class="" href="/racing/information/Chinese/Racing/FormLine.aspx" target="">&nbsp;同場賽駒上次對壘賽績比較</a>
+                                                            <a id="lnk25" class="" href="/racing/information/Chinese/Racing/ExceptionalFactors.aspx" target="">&nbsp;特別因素</a>
+                                                            <a id="lnk26" class="" href="/racing/information/Chinese/Racing/VeterinaryRecord.aspx" target="">&nbsp;傷患紀錄</a>
+                                                    </div>
+                                            </div>
+                                            <div class="menuNav menuNav_cn" id="hel3">
+                                                <a id="lnk3" class="one_nav " href="//bet.hkjc.com/ch/racing/wp/" target="_blank">&nbsp;即時賠率</a>
+                                            </div>
+                                            <div class="menuNav menuNav_cn" id="hel4">
+                                                <a id="lnk4" class="one_nav " href="/racing/information/Chinese/racing/TrainersEntries.aspx" target="">&nbsp;練馬師分場表</a>
+                                                    <div class="twoMenu" style="">
+                                                            <a id="lnk41" class="" href="/racing/information/Chinese/Racing/TrainersEntries.aspx" target="">&nbsp;全日練馬師分場表</a>
+                                                            <a id="lnk42" class="" href="/racing/information/Chinese/Racing/TNCEntries.aspx" target="">&nbsp;練馬師王出馬表</a>
+                                                    </div>
+                                            </div>
+                                            <div class="menuNav menuNav_cn" id="hel5">
+                                                <a id="lnk5" class="one_nav " href="/racing/information/chinese/Racing/JockeysRides.aspx" target="">&nbsp;騎師分場表</a>
+                                                    <div class="twoMenu" style="">
+                                                            <a id="lnk51" class="" href="/racing/information/Chinese/Racing/JockeysRides.aspx" target="">&nbsp;全日騎師分場表</a>
+                                                            <a id="lnk52" class="" href="/racing/information/chinese/Racing/JKCScheduledRides.aspx" target="">&nbsp;騎師王坐騎表</a>
+                                                    </div>
+                                            </div>
+                                            <div class="menuNav menuNav_cn" id="hel6">
+                                                <a id="lnk6" class="one_nav " href="/racing/information/Chinese/racing/Changes.aspx" target="">&nbsp;參考資料</a>
+                                                    <div class="twoMenu" style="">
+                                                            <a id="lnk61" class="" href="/racing/information/Chinese/racing/Changes.aspx" target="">&nbsp;更易事項</a>
+                                                            <a id="lnk62" class="" href="/racing/information/chinese/Racing/summary.aspx" target="">&nbsp;賽馬日一般資訊</a>
+                                                            <a id="lnk63" class="" href="/racing/chinese/racing-info/rdf/raceday_focus_1.asp" target="">&nbsp;賽日頭條</a>
+                                                            <a id="lnk64" class="" href="/racing/speedpro/chinese/formguide/formguide.html" target="_blank">&nbsp;速勢能量</a>
+                                                            <a id="lnk65" class="" href="javascript:NewWindow(&#39;/racing/chinese/stats-centre/index.aspx&#39;,&#39;statscentre&#39;,640,600,0,0);" target="">&nbsp;賽日數據</a>
+                                                            <a id="lnk66" class="" href="/racing/chinese/racing-info/last-run-reminder.aspx" target="">&nbsp;上仗備忘</a>
+                                                            <a id="lnk67" class="" href="/racing/chinese/racing-info/newhorse.asp" target="">&nbsp;初出馬介紹</a>
+                                                            <a id="lnk68" class="" href="//campaign.hkjc.com/ch/racing/conghua-movement-records.aspx" target="_blank">&nbsp;馬匹搬遷紀錄</a>
+                                                            <a id="lnk69" class="" href="//campaign.hkjc.com/ch/racing/jtcombo_debutants_statistics.aspx" target="_blank">&nbsp;騎練配對及初岀馬成績</a>
+                                                            <a id="lnk610" class="" href="/racing/Chinese/tipsindex/tips_index.asp" target="_blank">&nbsp;貼士指數</a>
+                                                            <a id="lnk611" class="" href="/racing/chinese/racing-info/racing_course_select.aspx" target="_top">&nbsp;賽道選用</a>
+                                                            <a id="lnk612" class="" href="/racing/chinese/racing-info/racing_course.aspx" target="">&nbsp;跑道資料</a>
+                                                            <a id="lnk613" class="" href="/racing/chinese/racing-info/racing_course_time.aspx" target="">&nbsp;跑道標準及紀錄時間 </a>
+                                                            <a id="lnk614" class="" href="/racing/chinese/racing-info/racing_rules_instr.aspx" target="">&nbsp;賽事規例及指示</a>
+                                                            <a id="lnk615" class="" href="/racing/chinese/learn-racing/learn-procedures.aspx" target="">&nbsp;馬匹報名及排位程序</a>
+                                                            <a id="lnk616" class="" href="/racing/chinese/racing-info/reg_approved_gear.aspx" target="">&nbsp;香港賽馬會裝備登記冊(馬匹和人)</a>
+                                                            <a id="lnk617" class="" href="//member.hkjc.com/member/chinese/horse-owner/list-of-bloodstock-agents.aspx" target="">&nbsp;販馬代理</a>
+                                                            <a id="lnk618" class="" href="/racing/chinese/racing-info/handicap_policy.asp" target="">&nbsp;評磅及評分政策</a>
+                                                            <a id="lnk619" class="" href="javascript:jcew_allupcalculator(&#39;/racing/information/Chinese/racing/AllUpCalculator.aspx&#39;)" target="">&nbsp;過關計算機</a>
+                                                            <a id="lnk620" class="" href="/racing/information/Chinese/racing/TTAutoPick.aspx" target="">&nbsp;三T神算機</a>
+                                                            <a id="lnk621" class="" href="/racing/chinese/racing-info/racing_weather.asp" target="">&nbsp;天氣預測</a>
+                                                    </div>
+                                            </div>
+                                            <div class="menuNav menuNav_cn" id="hel7">
+                                                <a id="lnk7" class="one_nav " href="/racing/information/Chinese/racing/Draw.aspx" target="">&nbsp;統計資料</a>
+                                                    <div class="twoMenu" style="">
+                                                            <a id="lnk71" class="" href="/racing/information/Chinese/racing/Draw.aspx" target="">&nbsp;檔位統計</a>
+                                                            <a id="lnk72" class="" href="/racing/chinese/racing-info/tnc-odds-chart.aspx" target="">&nbsp;練馬師王賠率走勢圖</a>
+                                                            <a id="lnk73" class="" href="/racing/information/Chinese/tnc/tncStat.aspx" target="">&nbsp;練馬師王統計</a>
+                                                            <a id="lnk74" class="" href="/racing/chinese/racing-info/jkc-odds-chart.aspx" target="">&nbsp;騎師王賠率走勢圖</a>
+                                                            <a id="lnk75" class="" href="/racing/information/chinese/Jkc/JkcStat.aspx" target="">&nbsp;騎師王統計</a>
+                                                            <a id="lnk76" class="" href="/racing/information/chinese/Jockey/JockeyFavourite.aspx" target="">&nbsp;騎師大熱勝出及入位統計</a>
+                                                            <a id="lnk77" class="" href="/racing/information/chinese/Trainers/TrainerFavourite.aspx" target="">&nbsp;練馬師大熱勝出及入位統計</a>
+                                                    </div>
+                                            </div>
+                                            <div class="menuNav menuNav_cn" id="hel8">
+                                                <a id="lnk8" class="one_nav selected_cur" href="/racing/information/Chinese/racing/LocalResults.aspx" target="">&nbsp;賽果</a>
+                                            </div>
+                                            <div class="menuNav menuNav_cn" id="hel9">
+                                                <a id="lnk9" class="one_nav " href="/racing/information/Chinese/Reports/RaceReportFull.aspx" target="">&nbsp; 賽事報告</a>
+                                                    <div class="twoMenu" style="">
+                                                            <a id="lnk91" class="" href="/racing/information/Chinese/Reports/RaceReportFull.aspx" target="">&nbsp;競賽事件報告</a>
+                                                            <a id="lnk92" class="" href="/racing/information/Chinese/Reports/CORunning.aspx" target="">&nbsp;沿途走勢評述</a>
+                                                    </div>
+                                            </div>
+                                            <div class="menuNav menuNav_cn" id="hel10">
+                                                <a id="lnk10" class="one_nav " href="/racing/information/Chinese/Jockey/JockeyRanking.aspx" target="">&nbsp;騎練資料</a>
+                                                    <div class="twoMenu" style="">
+                                                            <a id="lnk101" class="" href="/racing/information/Chinese/Jockey/JockeyRanking.aspx" target="">&nbsp;騎師資料</a>
+                                                            <a id="lnk102" class="" href="/racing/information/Chinese/Trainers/TrainerRanking.aspx" target="">&nbsp;練馬師資料</a>
+                                                    </div>
+                                            </div>
+                                            <div class="menuNav menuNav_cn" id="hel11">
+                                                <a id="lnk11" class="one_nav " href="/racing/information/chinese/Horse/SelectHorse.aspx" target="">&nbsp;馬匹資料</a>
+                                                    <div class="twoMenu" style="">
+                                                            <a id="lnk111" class="" href="/racing/information/chinese/Horse/SelectHorse.aspx" target="">&nbsp;馬匹資料</a>
+                                                            <a id="lnk112" class="" href="/racing/information/Chinese/Horse/LatestOnHorse.aspx?View=Horses/clas/" target="">&nbsp;馬匹評分</a>
+                                                            <a id="lnk113" class="" href="/racing/chinese/racing-info/fwb_declared_starters.asp" target="">&nbsp;「自購曾出賽馬匹及新馬特別獎金計劃」及「香港國際馬匹拍賣會新馬獎金」資料</a>
+                                                            <a id="lnk114" class="" href="/racing/information/chinese/Trackwork/TrackworkSearch.aspx" target="">&nbsp;晨操資料</a>
+                                                            <a id="lnk115" class="" href="/racing/information/chinese/Horse/Btresult.aspx" target="">&nbsp;試閘結果</a>
+                                                            <a id="lnk116" class="" href="/racing/information/Chinese/VeterinaryRecords/OveRecord.aspx" target="">&nbsp;傷患紀錄</a>
+                                                            <a id="lnk117" class="" href="/racing/information/Chinese/Horse/LatestOnHorse.aspx" target="">&nbsp;馬匹消息</a>
+                                                            <a id="lnk118" class="" href="/racing/information/Chinese/Racing/VeterinaryRecord.aspx" target="">&nbsp;馬匹健康狀況</a>
+                                                            <a id="lnk119" class="" href="/racing/information/chinese/Horse/HorseFormerName.aspx" target="">&nbsp;馬匹來港前名稱</a>
+                                                            <a id="lnk1110" class="" href="/racing/chinese/racing-info/pps_import_critieria.asp" target="">&nbsp;馬匹進口資格</a>
+                                                            <a id="lnk1111" class="" href="//www.hkjc.com/chinese/pp_formsheet/Veterinary_Pre-Import_Exam_Protocol_Version_Chi.pdf" target="_blank">&nbsp;馬匹進口前體格檢驗規定</a>
+                                                            <a id="lnk1112" class="" href="/racing/chinese/racing-info/ppo_performance_current.asp" target="">&nbsp;自購馬來港前賽績</a>
+                                                    </div>
+                                            </div>
+                                            <div class="menuNav menuNav_cn" id="hel12">
+                                                <a id="lnk12" class="one_nav " href="/racing/information/chinese/Horse/Btresult.aspx" target="">&nbsp;試閘結果</a>
+                                            </div>
+                                            <div class="menuNav menuNav_cn" id="hel13">
+                                                <a id="lnk13" class="one_nav " href="/racing/information/Chinese/Racing/Fixture.aspx" target="">&nbsp;賽期表</a>
+                                            </div>
+            </div>
+            
+<style>
+    .local {
+        cursor: pointer;
+        color: #03c;
+    }
+
+    .local:hover {
+        color: #90c;
+    }
+
+    .local:link {
+        color: #03c;
+    }
+
+    .localResults p {
+        padding: 0;
+    }
+
+    .localResults > div {
+        width: 760px;
+    }
+
+    .localResults .top_races td {
+        padding: 1px;
+    }
+
+    .localResults .go_pic {
+        display: inline-block;
+        width: 26px;
+        height: 20px;
+        background: url(~/Images/Racing/Chinese/go.gif) no-repeat;
+        vertical-align: top;
+    }
+
+    .localResults .raceMeeting_select {
+        margin-top: 16px;
+    }
+
+    .localResults .sectional_time_btn {
+        margin: 16px 0;
+    }
+
+    .localResults .sectional_time_btn img {
+        float: right;
+    }
+
+    .localResults .race_tab tbody {
+        margin-top: 3px;
+    }
+
+    .localResults .race_tab .icon_link a {
+        margin-right: 10px;
+    }
+
+    .localResults .performance {
+        margin-top: 14px;
+    }
+
+    .localResults .performance table {
+        border: 2px solid #005297;
+        font-family: "Arial","Helvetica","sans-serif","細明體_HKSCS","細明體","新細明體";
+    }
+
+    .localResults .performance table i {
+        display: inline-block;
+        width: 14px;
+        padding-right: 1px;
+    }
+
+    .localResults .performance table td {
+        word-break: keep-all;
+        padding: 0;
+    }
+
+    .localResults .bg_dc {
+        background: #dcdcdc;
+    }
+
+    .localResults .dividend_tab {
+        margin: 8px 0 15px;
+    }
+
+    .localResults .dividend_tab table {
+        border: 2px solid #005297;
+        margin-right: 20px;
+    }
+
+    .localResults .dividend_tab td {
+        padding: 0;
+    }
+
+    .localResults .raceRunning_photos, .localResults .finish_photos {
+        width: 250px;
+        border: 1px solid #005297;
+        margin-bottom: 10px;
+    }
+
+    .localResults .raceRunning_photos p, .localResults .finish_photos p {
+        padding: 1px 0;
+    }
+
+    .localResults .raceRunning_photos img {
+        width: 100%;
+    }
+
+    .localResults .link_befor_icon {
+        line-height: 20px;
+    }
+
+    .localResults .link_befor_icon img {
+        display: inline-block;
+        width: 18px;
+        height: 14px;
+        background-size: 18px 14px;
+    }
+
+    .localResults .race_incident_report {
+        margin-bottom: 20px;
+        border: 1px solid #005297;
+    }
+
+    .localResults .race_incident_report .info_p {
+        line-height: 18px;
+        padding: 15px;
+        background: #e8e8e8;
+    }
+
+    .localResults .hourse_breed_tab {
+        width: 760px;
+    }
+
+    .localResults .hourse_breed_tab td {
+        border: 1px solid rgba(153,153,153,1);
+    }
+
+    .localResults .bg_ffd7d7 {
+        background: #ffd7d7;
+    }
+
+    .localResults .bg_cecece {
+        background: #cecece;
+    }
+
+    .localResults .remark_botm_div p {
+        margin-top: 16px;
+    }
+
+    .fontFam {
+        font-family: Arial,Helvetica,sans-serif,'細明體_HKSCS','細明體','新細明體';
+    }
+
+    .performance tbody tr {
+        background: #eeeeee;
+    }
+
+    .performance tbody tr:nth-child(2n) {
+        background: #fff;
+    }
+
+    td {
+        word-break: keep-all
+    }
+
+    .commTitlePic {
+        display: inline-block;
+    }
+
+    .finish_photo {
+        text-align: center;
+        display: inline-block;
+        width: 60px;
+    }
+</style>
+
+
+
+<div class="localResults commContent fontFam">
+    <div class="commTitlePic">
+        <img src="/racing/info/Chinese/revamp/images/Racing/title_results.gif" border="0">
+            <div class="f_fr" id="sdceo_zone_EWRTSR1C_div"></div>
+    </div>
+    <div class="f_clear top_races">
+        <table class="f_fs12 js_racecard">
+                    <tr>
+                        <td class="font_w7 f_tar" style="white-space:nowrap; vertical-align: middle;"><span style="color:#666666;font-size:12px;font-weight:700;font-family:Arial,Verdana,Helvetica,sans-serif;">跑馬地:</span> </td>
+                                <td>
+                                        <a href="/racing/information/Chinese/Racing/LocalResults.aspx?RaceDate=2025/02/26&Racecourse=HV&RaceNo=1">
+                                            <img src="//racing.hkjc.com/racing/info/StaticFile/Images/Racing/racecard_rt_1.gif" />
+                                        </a>
+                                </td>
+                                <td>
+                                        <a href="/racing/information/Chinese/Racing/LocalResults.aspx?RaceDate=2025/02/26&Racecourse=HV&RaceNo=2">
+                                            <img src="//racing.hkjc.com/racing/info/StaticFile/Images/Racing/racecard_rt_2.gif" />
+                                        </a>
+                                </td>
+                                <td>
+                                        <a href="/racing/information/Chinese/Racing/LocalResults.aspx?RaceDate=2025/02/26&Racecourse=HV&RaceNo=3">
+                                            <img src="//racing.hkjc.com/racing/info/StaticFile/Images/Racing/racecard_rt_3.gif" />
+                                        </a>
+                                </td>
+                                <td>
+                                        <a href="/racing/information/Chinese/Racing/LocalResults.aspx?RaceDate=2025/02/26&Racecourse=HV&RaceNo=4">
+                                            <img src="//racing.hkjc.com/racing/info/StaticFile/Images/Racing/racecard_rt_4.gif" />
+                                        </a>
+                                </td>
+                                <td>
+                                        <a href="/racing/information/Chinese/Racing/LocalResults.aspx?RaceDate=2025/02/26&Racecourse=HV&RaceNo=5">
+                                            <img src="//racing.hkjc.com/racing/info/StaticFile/Images/Racing/racecard_rt_5.gif" />
+                                        </a>
+                                </td>
+                                <td>
+                                        <a href="/racing/information/Chinese/Racing/LocalResults.aspx?RaceDate=2025/02/26&Racecourse=HV&RaceNo=6">
+                                            <img src="//racing.hkjc.com/racing/info/StaticFile/Images/Racing/racecard_rt_6.gif" />
+                                        </a>
+                                </td>
+                                <td>
+                                        <a href="/racing/information/Chinese/Racing/LocalResults.aspx?RaceDate=2025/02/26&Racecourse=HV&RaceNo=7">
+                                            <img src="//racing.hkjc.com/racing/info/StaticFile/Images/Racing/racecard_rt_7.gif" />
+                                        </a>
+                                </td>
+                                <td>
+                                        <a href="/racing/information/Chinese/Racing/LocalResults.aspx?RaceDate=2025/02/26&Racecourse=HV&RaceNo=8">
+                                            <img src="//racing.hkjc.com/racing/info/StaticFile/Images/Racing/racecard_rt_8.gif" />
+                                        </a>
+                                </td>
+                                <td>
+                                        <a href="/racing/information/Chinese/Racing/LocalResults.aspx?RaceDate=2025/02/26&Racecourse=HV&RaceNo=9">
+                                            <img src="//racing.hkjc.com/racing/info/StaticFile/Images/Racing/racecard_rt_9.gif" />
+                                        </a>
+                                </td>
+                        <td>
+                            <a href="/racing/information/Chinese/Racing/ResultsAll.aspx?RaceDate=2025/02/26" class='local'><img src="//racing.hkjc.com/racing/info/StaticFile/Chinese/Images/Racing/racecard_rt_all.gif" /></a>
+                        </td>
+                    </tr>
+        </table>
+    </div>
+        <div class="raceMeeting_select">
+            <p class="f_clear">
+                <span class="f_fl f_fs13">賽事日期: 26/02/2025 &nbsp;&nbsp; 跑馬地</span>
+                <span class="f_fr">
+                    <select id="selectId" class="f_fs11">
+                                    <option value="23/03/2025">23/03/2025</option>
+                                    <option value="19/03/2025">19/03/2025</option>
+                                    <option value="15/03/2025">15/03/2025</option>
+                                    <option value="12/03/2025">12/03/2025</option>
+                                    <option value="09/03/2025">09/03/2025</option>
+                                    <option value="08/03/2025">08/03/2025</option>
+                                    <option value="05/03/2025">05/03/2025</option>
+                                    <option value="02/03/2025">02/03/2025</option>
+                                    <option selected="selected" value="26/02/2025">26/02/2025</option>
+                                    <option value="23/02/2025">23/02/2025</option>
+                                    <option value="22/02/2025">22/02/2025</option>
+                                    <option value="19/02/2025">19/02/2025</option>
+                                    <option value="16/02/2025">16/02/2025</option>
+                                    <option value="12/02/2025">12/02/2025</option>
+                                    <option value="09/02/2025">09/02/2025</option>
+                                    <option value="05/02/2025">05/02/2025</option>
+                                    <option value="31/01/2025">31/01/2025</option>
+                                    <option value="26/01/2025">26/01/2025</option>
+                                    <option value="25/01/2025">25/01/2025</option>
+                                    <option value="22/01/2025">22/01/2025</option>
+                                    <option value="19/01/2025">19/01/2025</option>
+                                    <option value="15/01/2025">15/01/2025</option>
+                                    <option value="12/01/2025">12/01/2025</option>
+                                    <option value="08/01/2025">08/01/2025</option>
+                                    <option value="05/01/2025">05/01/2025</option>
+                                    <option value="01/01/2025">01/01/2025</option>
+                                    <option value="29/12/2024">29/12/2024</option>
+                                    <option value="26/12/2024">26/12/2024</option>
+                                    <option value="22/12/2024">22/12/2024</option>
+                                    <option value="18/12/2024">18/12/2024</option>
+                                    <option value="15/12/2024">15/12/2024</option>
+                                    <option value="11/12/2024">11/12/2024</option>
+                                    <option value="08/12/2024">08/12/2024</option>
+                                    <option value="04/12/2024">04/12/2024</option>
+                                    <option value="01/12/2024">01/12/2024</option>
+                                    <option value="27/11/2024">27/11/2024</option>
+                                    <option value="24/11/2024">24/11/2024</option>
+                                    <option value="20/11/2024">20/11/2024</option>
+                                    <option value="17/11/2024">17/11/2024</option>
+                                    <option value="13/11/2024">13/11/2024</option>
+                                    <option value="10/11/2024">10/11/2024</option>
+                                    <option value="09/11/2024">09/11/2024</option>
+                                    <option value="06/11/2024">06/11/2024</option>
+                                    <option value="05/11/2024">05/11/2024</option>
+                                    <option value="03/11/2024">03/11/2024</option>
+                                    <option value="02/11/2024">02/11/2024</option>
+                                    <option value="30/10/2024">30/10/2024</option>
+                                    <option value="27/10/2024">27/10/2024</option>
+                                    <option value="23/10/2024">23/10/2024</option>
+                                    <option value="20/10/2024">20/10/2024</option>
+                                    <option value="19/10/2024">19/10/2024</option>
+                                    <option value="16/10/2024">16/10/2024</option>
+                                    <option value="13/10/2024">13/10/2024</option>
+                                    <option value="09/10/2024">09/10/2024</option>
+                                    <option value="06/10/2024">06/10/2024</option>
+                                    <option value="01/10/2024">01/10/2024</option>
+                                    <option value="29/09/2024">29/09/2024</option>
+                                    <option value="28/09/2024">28/09/2024</option>
+                                    <option value="25/09/2024">25/09/2024</option>
+                                    <option value="22/09/2024">22/09/2024</option>
+                                    <option value="18/09/2024">18/09/2024</option>
+                                    <option value="15/09/2024">15/09/2024</option>
+                                    <option value="14/09/2024">14/09/2024</option>
+                                    <option value="11/09/2024">11/09/2024</option>
+                                    <option value="08/09/2024">08/09/2024</option>
+                                    <option value="01/09/2024">01/09/2024</option>
+                                    <option value="23/08/2024">23/08/2024</option>
+                                    <option value="22/08/2024">22/08/2024</option>
+                                    <option value="21/08/2024">21/08/2024</option>
+                                    <option value="11/08/2024">11/08/2024</option>
+                                    <option value="04/08/2024">04/08/2024</option>
+                                    <option value="01/08/2024">01/08/2024</option>
+                                    <option value="31/07/2024">31/07/2024</option>
+                                    <option value="30/07/2024">30/07/2024</option>
+                                    <option value="28/07/2024">28/07/2024</option>
+                                    <option value="27/07/2024">27/07/2024</option>
+                                    <option value="14/07/2024">14/07/2024</option>
+                                    <option value="10/07/2024">10/07/2024</option>
+                                    <option value="07/07/2024">07/07/2024</option>
+                                    <option value="06/07/2024">06/07/2024</option>
+                                    <option value="04/07/2024">04/07/2024</option>
+                                    <option value="01/07/2024">01/07/2024</option>
+                                    <option value="30/06/2024">30/06/2024</option>
+                                    <option value="26/06/2024">26/06/2024</option>
+                                    <option value="23/06/2024">23/06/2024</option>
+                                    <option value="22/06/2024">22/06/2024</option>
+                                    <option value="21/06/2024">21/06/2024</option>
+                                    <option value="20/06/2024">20/06/2024</option>
+                                    <option value="19/06/2024">19/06/2024</option>
+                                    <option value="18/06/2024">18/06/2024</option>
+                                    <option value="15/06/2024">15/06/2024</option>
+                                    <option value="12/06/2024">12/06/2024</option>
+                                    <option value="08/06/2024">08/06/2024</option>
+                                    <option value="05/06/2024">05/06/2024</option>
+                                    <option value="02/06/2024">02/06/2024</option>
+                                    <option value="01/06/2024">01/06/2024</option>
+                                    <option value="29/05/2024">29/05/2024</option>
+                                    <option value="26/05/2024">26/05/2024</option>
+                                    <option value="22/05/2024">22/05/2024</option>
+                                    <option value="19/05/2024">19/05/2024</option>
+                                    <option value="18/05/2024">18/05/2024</option>
+                                    <option value="15/05/2024">15/05/2024</option>
+                                    <option value="12/05/2024">12/05/2024</option>
+                                    <option value="11/05/2024">11/05/2024</option>
+                                    <option value="08/05/2024">08/05/2024</option>
+                                    <option value="05/05/2024">05/05/2024</option>
+                                    <option value="04/05/2024">04/05/2024</option>
+                                    <option value="01/05/2024">01/05/2024</option>
+                                    <option value="28/04/2024">28/04/2024</option>
+                                    <option value="24/04/2024">24/04/2024</option>
+                                    <option value="20/04/2024">20/04/2024</option>
+                                    <option value="17/04/2024">17/04/2024</option>
+                                    <option value="14/04/2024">14/04/2024</option>
+                                    <option value="13/04/2024">13/04/2024</option>
+                                    <option value="10/04/2024">10/04/2024</option>
+                                    <option value="07/04/2024">07/04/2024</option>
+                                    <option value="06/04/2024">06/04/2024</option>
+                                    <option value="03/04/2024">03/04/2024</option>
+                                    <option value="31/03/2024">31/03/2024</option>
+                                    <option value="30/03/2024">30/03/2024</option>
+                                    <option value="27/03/2024">27/03/2024</option>
+                                    <option value="24/03/2024">24/03/2024</option>
+                                    <option value="20/03/2024">20/03/2024</option>
+                                    <option value="16/03/2024">16/03/2024</option>
+                                    <option value="13/03/2024">13/03/2024</option>
+                                    <option value="10/03/2024">10/03/2024</option>
+                                    <option value="06/03/2024">06/03/2024</option>
+                                    <option value="03/03/2024">03/03/2024</option>
+                                    <option value="28/02/2024">28/02/2024</option>
+                                    <option value="25/02/2024">25/02/2024</option>
+                                    <option value="24/02/2024">24/02/2024</option>
+                                    <option value="21/02/2024">21/02/2024</option>
+                                    <option value="18/02/2024">18/02/2024</option>
+                                    <option value="15/02/2024">15/02/2024</option>
+                                    <option value="12/02/2024">12/02/2024</option>
+                                    <option value="07/02/2024">07/02/2024</option>
+                                    <option value="04/02/2024">04/02/2024</option>
+                                    <option value="31/01/2024">31/01/2024</option>
+                                    <option value="28/01/2024">28/01/2024</option>
+                                    <option value="27/01/2024">27/01/2024</option>
+                                    <option value="24/01/2024">24/01/2024</option>
+                                    <option value="21/01/2024">21/01/2024</option>
+                                    <option value="17/01/2024">17/01/2024</option>
+                                    <option value="13/01/2024">13/01/2024</option>
+                                    <option value="10/01/2024">10/01/2024</option>
+                                    <option value="07/01/2024">07/01/2024</option>
+                                    <option value="04/01/2024">04/01/2024</option>
+                                    <option value="01/01/2024">01/01/2024</option>
+                                    <option value="29/12/2023">29/12/2023</option>
+                                    <option value="26/12/2023">26/12/2023</option>
+                                    <option value="24/12/2023">24/12/2023</option>
+                                    <option value="23/12/2023">23/12/2023</option>
+                                    <option value="20/12/2023">20/12/2023</option>
+                                    <option value="17/12/2023">17/12/2023</option>
+                                    <option value="13/12/2023">13/12/2023</option>
+                                    <option value="10/12/2023">10/12/2023</option>
+                                    <option value="06/12/2023">06/12/2023</option>
+                                    <option value="03/12/2023">03/12/2023</option>
+                                    <option value="29/11/2023">29/11/2023</option>
+                                    <option value="26/11/2023">26/11/2023</option>
+                                    <option value="22/11/2023">22/11/2023</option>
+                                    <option value="19/11/2023">19/11/2023</option>
+                                    <option value="15/11/2023">15/11/2023</option>
+                                    <option value="12/11/2023">12/11/2023</option>
+                                    <option value="11/11/2023">11/11/2023</option>
+                                    <option value="08/11/2023">08/11/2023</option>
+                                    <option value="07/11/2023">07/11/2023</option>
+                                    <option value="05/11/2023">05/11/2023</option>
+                                    <option value="04/11/2023">04/11/2023</option>
+                                    <option value="01/11/2023">01/11/2023</option>
+                                    <option value="29/10/2023">29/10/2023</option>
+                                    <option value="28/10/2023">28/10/2023</option>
+                                    <option value="25/10/2023">25/10/2023</option>
+                                    <option value="22/10/2023">22/10/2023</option>
+                                    <option value="21/10/2023">21/10/2023</option>
+                                    <option value="18/10/2023">18/10/2023</option>
+                                    <option value="15/10/2023">15/10/2023</option>
+                                    <option value="14/10/2023">14/10/2023</option>
+                                    <option value="11/10/2023">11/10/2023</option>
+                                    <option value="08/10/2023">08/10/2023</option>
+                                    <option value="07/10/2023">07/10/2023</option>
+                                    <option value="04/10/2023">04/10/2023</option>
+                                    <option value="01/10/2023">01/10/2023</option>
+                                    <option value="27/09/2023">27/09/2023</option>
+                                    <option value="24/09/2023">24/09/2023</option>
+                                    <option value="20/09/2023">20/09/2023</option>
+                                    <option value="17/09/2023">17/09/2023</option>
+                                    <option value="13/09/2023">13/09/2023</option>
+                                    <option value="10/09/2023">10/09/2023</option>
+                                    <option value="09/09/2023">09/09/2023</option>
+                                    <option value="03/09/2023">03/09/2023</option>
+                                    <option value="25/08/2023">25/08/2023</option>
+                                    <option value="24/08/2023">24/08/2023</option>
+                                    <option value="23/08/2023">23/08/2023</option>
+                                    <option value="20/08/2023">20/08/2023</option>
+                                    <option value="13/08/2023">13/08/2023</option>
+                                    <option value="06/08/2023">06/08/2023</option>
+                                    <option value="03/08/2023">03/08/2023</option>
+                                    <option value="02/08/2023">02/08/2023</option>
+                                    <option value="01/08/2023">01/08/2023</option>
+                                    <option value="30/07/2023">30/07/2023</option>
+                                    <option value="29/07/2023">29/07/2023</option>
+                                    <option value="23/07/2023">23/07/2023</option>
+                    </select>
+                    <a href="#" style="float:right" id="submitBtn"><img src="/racing/info/StaticFile/Chinese/Images/go.gif" /></a>
+
+                </span>
+            </p>
+        </div>
+
+        <div>有關資料將於稍後公佈。</div>
+
+
+
+
+    <div class="dividend_tab f_clear">
+        <div style="display: table; width: 250px;">
+            <div class="f_fl raceRunning_photos" id="racerunningpositionphotos" style="display: none;">
+                <p class="bg_blue color_w font_wb f_fs14">賽事沿途走位圖片</p>
+                <div class="imgposition"></div>
+                <p class="f_fs13 link_befor_icon f_tar"><img src="//racing.hkjc.com/racing/info/StaticFile/Images/Racing/red-arrow.gif" /><a href="/racing/information/Chinese/Reports/CORunning.aspx?Date=20250226&RaceNo=10" class='local'>沿途走勢評述</a></p>
+            </div>
+
+        </div>
+    </div>
+
+
+
+        <div class="remark_botm_div f_fs12">
+            <p>
+                <span>備註</span><br />
+                模擬鳥瞰重溫由特約供應商提供，供馬迷作個人娛樂資訊之用。但由於香港馬場內手機信號頻繁，因此其他接收系統有可能受干擾而令模擬鳥瞰重溫片段出現偏差。本會已盡一切努力務求有關資料盡可能準確，馬會就此並無責任。至於賽馬結果, 馬迷應參考實際的賽馬片段為準。
+            </p>
+        </div>
+    <div class="racing_remark"><p></p>
+<!--<p style="color: #ff0000;">競賽事件報告或會修改，將待賽日結束後發佈最終版本。</p>--></div>
+</div>
+<script type="text/javascript" src="/racing/information/Scripts/JQueryCookie.js"></script>
+<script type="text/javascript" src="/racing/information/Scripts/DragTable.js"></script>
+<script>
+    $(function () {
+        $(".js_racecard img").mouseover(function () {
+            var imgurl = $(this).attr("src");
+            var suffix = imgurl.substring(imgurl.lastIndexOf("."), imgurl.length);
+            var newimgurl = "";
+            if (imgurl.indexOf("_o") < 0) {
+                newimgurl = imgurl.substring(0, imgurl.lastIndexOf(".")) + "_r" + suffix;
+                $(this).addClass("active");
+                $(this).attr("src", newimgurl);
+                $(this).attr("delSrc", imgurl);
+            }
+        })
+        $(".js_racecard img").mouseout(function () {
+            if ($(this).hasClass("active")) {
+                var imgurl = $(this).attr("delSrc");
+                $(this).attr("src", imgurl);
+            }
+        })
+
+        $("#submitBtn").click(function () {
+            var raceDate = $("#selectId").val();
+            var raceDate1 = raceDate.toString().split('/').reverse().join('/');
+            window.location.href = "/racing/information/Chinese/Racing/LocalResults.aspx?RaceDate=" + raceDate1;
+        })
+    });
+
+    function pop_window(url_location) {
+        Welcome = window.top.open(url_location, 'Welcome', 'width=790,height=710,status=0,location=0,titlebar=0,directories=0,menubar=0,resizable=1,scrollbars=yes,screenX=150,screenY=100');
+    };
+</script>
+    <script type="text/javascript" src="/bannerad/js/system/sdceo_config.js"></script>
+    <script type="text/javascript" src="/bannerad/js/system/sdceo_core.js"></script>
+    <script>
+        function sdceo_bannerAd_EWRTSR1C_transform(sdceoDataObj) {
+            var bannerStr = "";
+            sdceoDataObj.BannerAdList.forEach(function (item) {
+                bannerStr += '<div>';
+                if (item.url) {
+                    bannerStr += '<a href="' + encodeURI(item.url) + '" target="' + item.target + '">';
+                    bannerStr += '<img style="border: 0px; width: ' + item.imageLargeWidth + 'px; height: ' + item.imageLargeHeight + 'px;" title="' + item.title + '" src="' + item.imagePathLarge + '" alt="' + item.imageAltText + '" />';
+                    bannerStr += '</a>';
+                }
+                else {
+                    bannerStr += '<img style="border: 0px; width: ' + item.imageLargeWidth + 'px; height: ' + item.imageLargeHeight + 'px;" title="' + item.title + '" src="' + item.imagePathLarge + '" alt="' + item.imageAltText + '" />';
+                }
+                bannerStr += '</div>';
+            });
+
+            document.getElementById("sdceo_zone_EWRTSR1C_div").innerHTML = bannerStr;
+        }
+
+        var script_EWRTSR1C = document.createElement('script');
+        script_EWRTSR1C.onload = function () {
+            sdceo_bannerAd_EWRTSR1C_transform(sdceo_getZoneBanner_EWRTSR1C(1));
+        };
+        script_EWRTSR1C.src = "/bannerad/js/zone/sdceo_zone_EWRTSR1C_banner.js?date=" + sdceo_util_getNow();
+        document.head.appendChild(script_EWRTSR1C);
+    </script>
+
+        </div>
+
+    </div>
+
+    <div class="shadowR"></div>
+</div>
+        </div>
+        <div id="header_bottom_banner"></div>
+        
+    
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $(".subNav").find("li").each(function () {
+                    if ($(this).children("a:first").text() == "Racing Info (Local)") {
+                        var secondNav = $(this).children("a:first").siblings("div[class='pullmenu clearfix']:first").children("div[class='content']");
+                        $("#header_bottom_banner").html(secondNav.html());
+                        $("#header_bottom_banner dl").addClass("f_clear");
+                        // $("#header_bottom_banner dl").append("<dt style='clear:both'></dt>");
+                        $("#header_bottom_banner>dl>dt>a").each(function () {
+                            $(this).prev().hide();
+                            var a_parent = $(this).parent();
+                            a_parent.mouseover(function () {
+                                var thirdNavDiv = $(this).children("div:first");
+                                thirdNavDiv.show();
+                                thirdNavDiv.attr("id", "third_nav");
+                                thirdNavDiv.removeClass();
+                            });
+                            a_parent.mouseout(function () {
+                                $(this).children("div:first").hide();
+                            });
+
+                        });
+
+                    }
+                });
+            });
+        </script>
+        <footer>
+            
+
+
+<script type="text/javascript">
+			
+			function jcew_getDynamicCurrentOddsUrl(link, isPopup) {
+				var param = 'na';
+				var url = window.location;
+				var localPattern = /racing\/info/i;
+				var overseaPattern = /racing\/overseas/i;
+				if(localPattern.test(url)){
+					param = 'local';
+				}
+				else if(overseaPattern.test(url)){
+					param = 'overseas';
+				}
+						
+				var newLink = link + '&dv=' + param;
+				if (isPopup) {
+				  window.open(newLink, '_blank');
+				} else {
+				  window.location.href = newLink;
+				}
+			}
+			
+		</script><div id="seo" class="fiveCol">
+<div class="content clearfix">
+<dl>
+<dt>賽事資料</dt>
+<dd>
+<a href="/racing/information/Chinese/racing/Entries.aspx" target="_self">報名表</a>
+</dd>
+<dd>
+<a href="/racing/information/Chinese/racing/RaceCard.aspx" target="_self">排位表(本地)</a>
+</dd>
+<dd>
+<a href="//bet.hkjc.com/ch/racing/wp/" target="_self">賠率</a>
+</dd>
+<dd>
+<a href="/racing/information/Chinese/racing/LocalResults.aspx" target="_self">賽果</a>
+</dd>
+<dd>
+<a href="/racing/information/Chinese/Racing/JockeysRides.aspx" target="_self">騎師分場表</a>
+</dd>
+<dd>
+<a href="/racing/information/Chinese/racing/TrainersEntries.aspx" target="_self">練馬師分場表</a>
+</dd>
+</dl>
+<div></div>
+<dl>
+<dt>賽馬消息及資訊</dt>
+<dd>
+<a href="//racingnews.hkjc.com/chinese/" target="_self">賽馬消息</a>
+</dd>
+<dd>
+<a href="//racingnews.hkjc.com/chinese/archive/" target="_self">賽馬新聞資料庫</a>
+</dd>
+<dd>
+<a href="/racing/chinese/racing-info/pattern_races.aspx" target="_self">主要賽事</a>
+</dd>
+<dd>
+<a href="/racing/information/Chinese/Horse/SelectHorse.aspx" target="_self">馬匹資料</a>
+</dd>
+<dd>
+<a href="/racing/information/Chinese/Jockey/JockeyRanking.aspx" target="_self">騎師資料</a>
+</dd>
+<dd>
+<a href="/racing/information/Chinese/Trainers/TrainerRanking.aspx" target="_self">練馬師資料</a>
+</dd>
+</dl>
+<div></div>
+<dl>
+<dt>分析工具</dt>
+<dd>
+<a href="//racing.hkjc.com/racing/speedpro/chinese/formguide/1.html" target="_blank">速勢能量</a>
+</dd>
+<dd>
+<a href="javascript:NewWindow('//racing.hkjc.com/racing/chinese/stats-centre/index.aspx','statscentre',640,600,0,0);" target="_self">賽日數據</a>
+</dd>
+<dd>
+<a href="/racing/chinese/racing-info/newhorse.asp" target="_self">初出馬介紹</a>
+</dd>
+<dd>
+<a href="//campaign.hkjc.com/ch/racing/jtcombo_debutants_statistics.aspx" target="_blank">騎練配對及初岀馬成績</a>
+</dd>
+<dd>
+<a href="//campaign.hkjc.com/ch/racing/conghua-movement-records.aspx" target="_blank">馬匹搬遷紀錄</a>
+</dd>
+<dd>
+<a href="//racing.hkjc.com/racing/Chinese/tipsindex/tips_index.asp" target="_blank">貼士指數</a>
+</dd>
+</dl>
+<div></div>
+<dl>
+<dt>視聽播放區</dt>
+<dd>
+<a href="/racing/chinese/showcase/live.asp" target="_self">賽日收音機</a>
+</dd>
+<dd>
+<a href="/racing/chinese/showcase/showcase.asp" target="_self">賽馬節目</a>
+</dd>
+<dd>
+<a href="/racing/chinese/showcase/btrs.asp" target="_self">試閘片段</a>
+</dd>
+<dd>
+<a href="/racing/chinese/racing-info/ppo_performance_current.asp" target="_self">自購馬來港前賽事片段</a>
+</dd>
+<dd>
+<a href="/racing/chinese/showcase/racingenew.asp" target="_self">賽馬娛樂新聞</a>
+</dd>
+</dl>
+<div></div>
+<dl>
+<dt>實用資訊</dt>
+<dd>
+<a href="/racing/information/Chinese/Racing/Summary.aspx" target="_self">賽馬日一般資訊</a>
+</dd>
+<dd>
+<a href="/racing/information/Chinese/racing/Draw.aspx" target="_self">檔位統計</a>
+</dd>
+<dd>
+<a href="/racing/information/Chinese/Jkc/JkcStat.aspx" target="_self">騎師王統計</a>
+</dd>
+<dd>
+<a href="//special.hkjc.com/racing/info/ch/betting/guide-flexibet-index.asp" target="_blank">靈活玩</a>
+</dd>
+<dd>
+<a href="//mcs.hkjc.com" target="_blank">傳媒專用區</a>
+</dd>
+</dl>
+</div>
+</div>
+
+<script type="text/javascript">
+		init();
+		if (d.getElementById('levadeMainNav'))	
+		{
+			new setLevadeNav();
+		}
+		if (d.getElementById('levadeSearchContainer'))
+		{
+			new setAdvSearch('btnAdvSearch', 'levadeSearchPulldown');
+		}
+		setPromoPopup('', '', '', 'yes', 'yes', '');
+	</script><div id="footer"><div class="rgp"><img usemap="#RGP_970c" src="/corporate/common/chinese/images/rgp_text_chi_970.gif" border="0" alt="博彩要有節制，未滿十八歲人士不得投注或進入可投注的地方。向非法或海外莊家下注，最高可被判監禁九個月及罰款三萬港元。切勿沉迷賭博，如需尋求輔導協助，可致電平和基金熱線1834 633。" /> 
+<map id="RGP_970c" name="RGP_970c">
+<area shape="rect" coords="900,2,968,43" href="//www.hkjc.com/responsible-gambling/ch/index.aspx" alt="有節制博彩" target="_blank"></area>
+</map>
+<!--
+<div class="ifha"></div>
+--></div>
+<div class="nav clearfix">
+<div class="content"><a class="first" href="//www.hkjc.com/chinese/corporate/faq.asp" target="_blank">常見問題</a> | <a href="//www.hkjc.com/infomenu/ch/contact/feedback.aspx" target="_blank">聯絡我們</a> | <a href="//mcs.hkjc.com/"  target="_blank">傳媒專用區 </a>| <a href="//www.hkjc.com/chinese/corporate/corp_sitemap.asp">網頁指南</a> | <a href="//www.hkjc.com/chinese/betting/betting_rule.aspx"  target="_blank">規例</a> | <a href="//www.hkjc.com/responsible-gambling/ch/index.aspx" target="_blank">提倡有節制博彩</a> | <a href="//www.hkjc.com/chinese/corporate/corp_privacy.asp">私隱條款</a> | <a href="//www.hkjc.com/chinese/corporate/corp_disclaimer.asp">免責聲明</a> | <a href="//www.hkjc.com/home/chinese/corporate/security-tips.aspx">網絡保安</a><br /></div>
+<div class="copyright">版權所有 不得轉載 &copy; 2000-2017 香港賽馬會</div>
+</div></div><script src="//common.hkjc.com/wa/wa_tracker.js" type="text/javascript"></script><script src="//common.hkjc.com/wa/wa_tracker_config.js" type="text/javascript"></script>
+<script src="//common.hkjc.com/wa/glassbox.js" type="text/javascript"></script>
+<script type="text/javascript">
+		var waTaggingFired = false;
+
+		var firedfunc = function() {
+			if(waTaggingFired){
+				return;
+			}
+						
+			//Original WA tagging logic goes here
+			
+					try {
+						WATracker.trackPageView('racing-content');
+					} catch (e) {}
+						
+		   
+			waTaggingFired = true;
+		};
+
+		if ( typeof(SSO) == 'undefined') {
+		}
+		else {
+			SSO.OnUserProfileLoaded(firedfunc);
+		}
+	</script>
+
+            
+        </footer>
+        
+    </body>
+</html>
