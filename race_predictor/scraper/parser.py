@@ -1,16 +1,35 @@
 import re
-from typing import Dict, List
+from typing import Dict, List, Optional, Union # 导入 Optional 和 Union
 from bs4 import BeautifulSoup
 # 使用絕對導入
 from utils.logger import logger
+import pandas as pd # 需要 pandas 来处理 NA 值
 
-def parse_basic_info(soup: BeautifulSoup) -> Dict[str, str]:
-    """解析賽事基本資訊：日期、馬場、場次、班次、距離、賽道、場地狀況、獎金、完成時間"""
-    basic_info = {
+def time_string_to_seconds(time_str: str) -> Optional[float]:
+    """将 m:ss.ff 或 ss.ff 格式的时间字符串转换为总秒数"""
+    if pd.isna(time_str) or not isinstance(time_str, str):
+        return None
+    try:
+        if ':' in time_str:
+            parts = time_str.split(':')
+            minutes = int(parts[0])
+            seconds = float(parts[1])
+            return minutes * 60 + seconds
+        else:
+            # 假设是 ss.ff 格式
+            return float(time_str)
+    except ValueError:
+        logger.warning(f"无法解析时间字符串: '{time_str}'")
+        return None
+
+def parse_basic_info(soup: BeautifulSoup) -> Dict[str, Union[str, float, None]]:
+    """解析賽事基本資訊：日期、馬場、場次、班次、距離、賽道、場地狀況、獎金、完成時間、累積時間（秒數）"""
+    basic_info: Dict[str, Union[str, float, None]] = { # 明确类型
         "日期": "", "馬場": "", "場次": "", "班次": "",
         "距離": "", "賽道": "", "場地狀況": "",
-        "獎金": "", "全場時間": "",
-        "累積時間": "", "分段時間": "", "200米時間": ""
+        "獎金": "", "全場時間_秒": None, # 存储秒数
+        "累積時間1_秒": None, "累積時間2_秒": None, "累積時間3_秒": None, "累積時間4_秒": None, # 存储秒数
+        "分段時間1_秒": None, "分段時間2_秒": None, "分段時間3_秒": None, "分段時間4_秒": None, # 存储秒数
     }
 
     date_venue_span = soup.select_one("span.f_fl.f_fs13")
@@ -58,41 +77,60 @@ def parse_basic_info(soup: BeautifulSoup) -> Dict[str, str]:
         if prize_match:
             basic_info["獎金"] = "HK$ " + prize_match.group(1)
             
-                    # ⏱ 分段時間
-        segment_times = re.findall(r'分段時間\s*[:：]?\s*((?:\d{1,3}\.\d{2}\s*){4})', info_text)
-        if segment_times:
-            segments = segment_times[0].strip().split()
-            for i, seg in enumerate(segments, 1):
-                basic_info[f"分段時間{i}"] = seg
+                    # ⏱ 分段時間 - 提取并转换为秒数
+        segment_times_match = re.search(r'分段時間\s*[:：]?\s*((?:\d{1,3}\.\d{2}\s*){3})', info_text)
+        if segment_times_match:
+            segments_str = segment_times_match.group(1).strip().split()
+            for i, seg_str in enumerate(segments_str, 1): # 只循环三次
+                seg_seconds = time_string_to_seconds(seg_str) # 转换为秒数
+                basic_info[f"分段時間{i}_秒"] = seg_seconds # 存储秒数
 
-        # ⏱ 累積時間（括號內）
-        accum_times = re.findall(r'\((\d{1,2}:\d{2}\.\d{2}|\d{1,3}\.\d{2})\)', info_text)
-        for i, acc in enumerate(accum_times[:4], 1):
-            basic_info[f"累積時間{i}"] = acc
+        # ⏱ 累積時間（括號內），转换为秒数存储
+        accum_times_str = re.findall(r'\((\d{1,2}:\d{2}\.\d{2}|\d{1,3}\.\d{2})\)', info_text)
+        for i, acc_str in enumerate(accum_times_str[:4], 1): # 最多取4个
+            seconds = time_string_to_seconds(acc_str)
+            basic_info[f"累積時間{i}_秒"] = seconds # 存储秒数
 
+        # 提取全场完成时间并转换为秒数 (需要找到正确的元素)
+        # 假设全场时间在赛果表格的第一行最后一列
+        results_table = soup.find("table", {"class": "table_bd"})
+        finish_time_seconds = None
+        if results_table:
+            first_row_cols = results_table.select("tbody tr:first-child td")
+            if len(first_row_cols) > 10: # 确保有足够列
+                 finish_time_str = first_row_cols[10].get_text(strip=True) # 第11列是完成时间
+                 finish_time_seconds = time_string_to_seconds(finish_time_str)
+                 basic_info["全場時間_秒"] = finish_time_seconds
 
-    # 額外抓取分段時間相關
-    data = {
-        "累積時間": [],
-        "分段時間": [],
-        "200米時間": []
-    }
+        # 计算分段时间4（秒数）
+        if finish_time_seconds is not None and basic_info["累積時間3_秒"] is not None:
+             # 确保两者都是有效的浮点数
+             if isinstance(finish_time_seconds, float) and isinstance(basic_info["累積時間3_秒"], float):
+                 segment4_seconds = round(finish_time_seconds - basic_info["累積時間3_秒"], 2)
+                 basic_info["分段時間4_秒"] = segment4_seconds
+             else:
+                 logger.warning("无法计算分段时间4，因为全场时间或累积时间3无效。")
+        elif finish_time_seconds is None: # 修正缩进
+             logger.warning("未找到全场时间，无法计算分段时间4。")
+        elif basic_info["累積時間3_秒"] is None: # 修正缩进
+             logger.warning("未找到累积时间3，无法计算分段时间4。")
 
-    all_times = soup.find_all("td", {"class": "f_tac"})
-    for td in all_times:
-        text = td.get_text(strip=True)
-        if re.match(r"^\(?\d{1,2}:\d{2}\.\d{2}\)?$", text):
-            data["累積時間"].append(text.replace("(", "").replace(")", ""))
-        elif re.match(r"^\d{2}\.\d{2}$", text):
-            num = float(text)
-            if num > 20:
-                data["分段時間"].append(text)
-            else:
-                data["200米時間"].append(text)
-
-    basic_info["累積時間"] = "|".join(data["累積時間"])
-    basic_info["分段時間"] = "|".join(data["分段時間"])
-    basic_info["200米時間"] = "|".join(data["200米時間"])
+    # 注意：下面这段提取 "累積時間", "分段時間", "200米時間" 的逻辑与上面提取括号内时间的方式可能冲突或重复
+    # 并且它们被合并成单一字符串，不利于后续处理。
+    # 建议审视是否还需要这部分，或者修改其逻辑以适应新的秒数存储方式。
+    # 暂时注释掉这部分，以避免覆盖上面计算好的秒数。
+    # data = {
+    #     "累積時間": [],
+    #     "分段時間": [],
+    #     "200米時間": []
+    # }
+    # all_times = soup.find_all("td", {"class": "f_tac"})
+    # for td in all_times:
+    #     text = td.get_text(strip=True)
+    #     # ... (原有的提取逻辑) ...
+    # basic_info["累積時間"] = "|".join(data["累積時間"]) # 这会覆盖上面计算的秒数
+    # basic_info["分段時間"] = "|".join(data["分段時間"])
+    # basic_info["200米時間"] = "|".join(data["200米時間"])
 
     return basic_info
 
